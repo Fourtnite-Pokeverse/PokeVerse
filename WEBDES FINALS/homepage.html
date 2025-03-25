@@ -1,0 +1,162 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Store</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="homepagestyle.css" rel="stylesheet">
+    <link rel="icon" href="Logos/Gaming.png">
+
+</head>
+<body>
+    <header class="header d-flex justify-content-between align-items-center">
+        <div class="d-flex align-items-center">
+            <img src="Logos/Gaming.png" alt="Logo" class="img-fluid" style="height: 70px; width: 70px;">
+            <span class="text-white h3 ml-2">Web Store</span>
+        </div>
+        <nav class="nav">
+            <a class="nav-link" href="#">Code Redemption</a>
+            <a class="nav-link" href="#">Event Ticketing</a>
+            <a class="btn btn-signup" href="#">Sign Up</a>
+        </nav>
+    </header>
+
+
+    <main>
+        <section class="banner">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators pokeball-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                </ol>
+
+                <div class="carousel-inner">
+                    <!-- Item 1 -->
+                    <div class="carousel-item active" data-popup-image="images/tixb.webp">
+                        <img src="images/banner1.png" class="d-block w-100" alt="Pokemon GO Fest 2025">
+
+                        <div class="badge">ONE TIME ONLY</div>
+                        <div class="title">
+                            <h1>Pokemon GO Fest 2025: Global Ticket</h1>
+                        </div>
+                        <button class="cta-btn">GET TICKET</button>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="carousel-item" data-popup-image="images/bundlepop.avif">
+                        <img src="images/coinbundle.png" class="d-block w-100" alt="PokéCoins">
+                        <div class="badge">SPECIAL OFFER</div>
+                        <div class="title">
+                            <h1>Special PokéCoin Bundle</h1>
+                        </div>
+                        <button class="cta-btn">BUY NOW</button>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="carousel-item" data-popup-image="images/exclusive-item.avif">
+                        <img src="images/itembox.png" class="d-block w-100" alt="Item Boxes">
+                        <div class="badge">EXCLUSIVE</div>
+                        <div class="title">
+                            <h1>Exclusive Item Boxes</h1>
+                        </div>
+                        <button class="cta-btn">VIEW ITEMS</button>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="carousel-item" data-popup-image="images/bundpopup.webp">
+                        <img src="images/bundle.png" class="d-block w-100" alt="Daily Bundles">
+                        <div class="badge">DAILY DEAL</div>
+                        <!-- Countdown Timer -->
+                        <div class="countdown-timer">
+                            <span>Offer ends in</span>
+                            <div class="timer" id="eventCountdown">23:59:59</div>
+                        </div>
+
+                        <div class="title">
+                            <h1>Daily Bundles</h1>
+                        </div>
+                        <button class="cta-btn">VIEW ITEMS</button>
+                    </div>
+                </div>
+
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </section>
+        <!--addition-->
+    <div class="sticky-nav-container">
+        <div id="sticky-nav" class="sticky-nav">
+            <nav class="nav nav-tabs">
+                <a class="nav-link active" href="#featured">Featured</a>
+                <a class="nav-link" href="#itemboxes">Item Boxes</a>
+                <a class="nav-link" href="#pokecoins">PokéCoins</a>
+                <a class="nav-link" href="#dailybundles">Daily Bundles</a>
+            </nav>
+        </div>
+    </div>
+         <section id="featured" class="product-section">
+            <div class="container">
+                <h2 class="text-center mb-5">Featured Items</h2>
+                <!-- Your featured content here -->
+            </div>
+        </section>
+        
+        <section id="itemboxes" class="product-section bg-light">
+            <div class="container">
+                <h2 class="text-center mb-5">Item Boxes</h2>
+                <!-- Your item boxes content here -->
+            </div>
+        </section>
+        
+        <section id="pokecoins" class="product-section">
+            <div class="container">
+                <h2 class="text-center mb-5">PokéCoins</h2>
+                <!-- Your pokecoins content here -->
+            </div>
+        </section>
+        
+        <section id="dailybundles" class="product-section bg-light">
+            <div class="container">
+                <h2 class="text-center mb-5">Daily Bundles</h2>
+                <!-- Your daily bundles content here -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Product Details Modal -->
+    <div class="modal fade" id="productModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header border-0 pb-0">
+                    <h5 class="modal-title font-weight-bold">Pokémon GO Fest 2025: Global Ticket</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body p-4">
+                    <!-- Product Image will be inserted here by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="homepage.js"></script>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,331 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    padding-top: 0;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    padding: 0.6rem 1rem;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1020;
+}
+
+.header .nav-link {
+    color: white;
+    font-size: 1.2rem;
+    padding: 0.5rem 0.8rem;
+    font-weight: bold;
+}
+
+.header .btn-signup {
+    background-color: white;
+    color: #007bff;
+    padding: 0.5rem 0.8rem;
+    font-size: 1.2rem;
+    margin: 0 2rem;
+    font-weight: bold;
+}
+
+/* Sticky Navigation */
+.sticky-nav-container {
+    position: sticky;
+    top: 60px; /* Header height */
+    z-index: 1010;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.sticky-nav .nav-tabs {
+    border-bottom: none;
+    justify-content: center;
+}
+
+.sticky-nav .nav-link {
+    color: #6c757d;
+    font-weight: bold;
+    padding: 8px 20px;
+    border: none !important;
+}
+
+.sticky-nav .nav-link.active {
+    color: #28a745;
+    background-color: transparent;
+    border-bottom: 3px solid #28a745 !important;
+}
+
+.sticky-nav .nav-link:hover {
+    color: #28a745;
+}
+
+/* Banner & Carousel */
+.banner {
+    position: relative;
+}
+
+.banner img {
+    width: 100%;
+    height: 700px;
+    object-fit: cover;
+}
+
+.banner .badge {
+    position: absolute;
+    top: 1rem;
+    left: 3rem;
+    background-color: #28a745;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    z-index: 10;
+}
+
+.banner .title {
+    position: absolute;
+    top: 4rem;
+    left: 3rem;
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+/* Carousel Controls */
+.banner .carousel-control-prev,
+.banner .carousel-control-next {
+    width: 50px;
+    height: 80px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    opacity: 0.9;
+    transition: all 0.3s ease;
+}
+
+.banner .carousel-control-prev:hover,
+.banner .carousel-control-next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 1;
+}
+
+.banner .carousel-control-prev {
+    left: 20px;
+}
+
+.banner .carousel-control-next {
+    right: 20px;
+}
+
+/* Carousel Indicators */
+.carousel-indicators {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    padding: 0.5rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    z-index: 15;
+    width: max-content;
+}
+
+.pokeball-indicators li {
+    width: 24px;
+    height: 24px;
+    margin: 0 8px;
+    background: url('Icons/indicatorpokeball.webp') no-repeat center/contain;
+    opacity: 0.7;
+    border: none;
+    transition: all 0.3s ease;
+    text-indent: -9999px;
+}
+
+.pokeball-indicators .active {
+    opacity: 1;
+    transform: scale(1.2);
+    filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.8));
+}
+
+/* Transitions */
+.carousel-item {
+    transition: transform 0.8s ease-in-out;
+}
+
+.carousel-item .title h1,
+.carousel-item .badge,
+.carousel-item .cta-btn {
+    transition: all 0.6s ease;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.carousel-item.active .title h1,
+.carousel-item.active .badge,
+.carousel-item.active .cta-btn {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.carousel-item.active .badge {
+    transition-delay: 0.2s;
+}
+
+.carousel-item.active .title h1 {
+    transition-delay: 0.4s;
+}
+
+.carousel-item.active .cta-btn {
+    transition-delay: 0.6s;
+}
+
+/* CTA Button */
+.cta-btn {
+    position: absolute;
+    bottom: 100px;
+    left: 46%;
+    transform: translateX(-50%);
+    background: #6a68d4;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 30px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+    width: max-content;
+    margin: 0 auto;
+}
+
+.cta-btn:hover {
+    background: #cc0000;
+    transform: translateX(-50%) scale(1.05);
+}
+
+/* Countdown Timer */
+.countdown-timer {
+    position: absolute;
+    top: 1.5rem;
+    right: 3rem;
+    background: rgba(0,0,0,0.8);
+    padding: 12px 20px;
+    border-radius: 30px;
+    color: white;
+    text-align: center;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 180px;
+    border: 2px solid #28a745;
+    box-shadow: 0 0 15px rgba(95, 82, 19, 0.4);
+}
+
+.countdown-timer span {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.timer {
+    font-family: 'Courier New', monospace;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #28a745;
+    line-height: 1;
+    letter-spacing: 2px;
+}
+
+/* Content Sections */
+.product-section {
+    padding: 60px 0;
+    min-height: 100vh;
+}
+
+/* Product Modal Styles */
+#productModal .modal-content {
+    border-radius: 12px;
+    overflow: hidden;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+#productModal .modal-lg {
+    max-width: 600px;
+}
+
+.product-image-container {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.product-image-container img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.badge-overlay {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: #28a745;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.price-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.original-price {
+    font-size: 1.2rem;
+    text-decoration: line-through;
+    color: #6c757d;
+}
+
+.discounted-price {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #28a745;
+}
+
+#productModal .btn-primary {
+    background-color: #6a68d4;
+    border: none;
+    border-radius: 8px;
+    transition: all 0.3s;
+    min-width: 200px;
+    padding: 10px 30px;
+}
+
+#productModal .btn-primary:hover {
+    background-color: #5a58c4;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
