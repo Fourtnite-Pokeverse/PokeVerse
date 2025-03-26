@@ -1,35 +1,46 @@
 $(document).ready(function() {
-    // ======================
-    // Sticky Navigation
-    // ======================
-    $(window).scroll(function() {
-        const scrollPosition = $(window).scrollTop();
+    console.log("jQuery version:", $.fn.jquery);
+
+
+    $('.sticky-nav .nav-link').on('click', function(e) {
+        e.preventDefault();
+        const targetId = $(this).attr('href');
+        const targetSection = $(targetId); // Get section by ID
         
-        // Update active nav link based on scroll position
+        if (targetSection.length) {
+            console.log('Scrolling to section with ID:', targetId);
+            
+            // Update active class
+            $('.sticky-nav .nav-link').removeClass('active');
+            $(this).addClass('active');
+            
+            // Scroll to section
+            $('html, body').animate({
+                scrollTop: targetSection.offset().top - 60
+            }, 800);
+        } else {
+            console.error('Section not found with ID:', targetId);
+        }
+    });
+
+
+    $(window).on('scroll', function() {
+        const scrollPosition = $(window).scrollTop() + 100;
+        
         $('.product-section').each(function() {
-            const sectionTop = $(this).offset().top - 100;
+            const sectionTop = $(this).offset().top;
             const sectionBottom = sectionTop + $(this).outerHeight();
-            const sectionId = $(this).attr('id');
+            const sectionId = '#' + $(this).attr('id');
             
             if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
                 $('.sticky-nav .nav-link').removeClass('active');
-                $('.sticky-nav .nav-link[href="#' + sectionId + '"]').addClass('active');
+                $(`.sticky-nav .nav-link[href="${sectionId}"]`).addClass('active');
             }
         });
     });
 
-    // Smooth scrolling for nav links
-    $('.sticky-nav .nav-link').click(function(e) {
-        e.preventDefault();
-        const target = $(this).attr('href');
-        $('html, body').animate({
-            scrollTop: $(target).offset().top - 60
-        }, 500);
-        
-        // Update active state
-        $('.sticky-nav .nav-link').removeClass('active');
-        $(this).addClass('active');
-    });
+
+    $(window).trigger('scroll');
 
     // ======================
     // Carousel Initialization
@@ -67,7 +78,6 @@ $(document).ready(function() {
             return;
         }
 
-        // Set end time (24 hours from now)
         const endTime = new Date();
         endTime.setHours(endTime.getHours() + 24);
 
@@ -75,49 +85,40 @@ $(document).ready(function() {
             const now = new Date();
             const timeLeft = endTime - now;
 
-            // Stop if time is up
             if (timeLeft <= 0) {
                 timerElement.textContent = "00:00:00";
                 return;
             }
 
-            // Calculate hours, minutes, seconds
             const hours = Math.floor(timeLeft / (1000 * 60 * 60));
             const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
-            // Format and display
             timerElement.textContent = 
                 `${hours.toString().padStart(2, '0')} : ${minutes.toString().padStart(2, '0')} : ${seconds.toString().padStart(2, '0')}`;
         }
 
-        // Run immediately, then every second
         updateTimer();
         setInterval(updateTimer, 1000);
     }
 
-    // Initialize countdown
     startCountdown();
 
     // ======================
     // Product Modal Functionality
     // ======================
     $('.carousel-item, .cta-btn').click(function(e) {
-        // Don't trigger if clicking on the CTA button from carousel item
         if ($(e.target).hasClass('cta-btn') || $(e.target).closest('.cta-btn').length) {
             e.stopPropagation();
         }
         
-        // Get the active slide
         const activeSlide = $('.carousel-item.active');
         const title = activeSlide.find('h1').text();
         const popupImage = activeSlide.data('popup-image');
         const badgeText = activeSlide.find('.badge').text();
         
-        // Update modal title
         $('#productModal .modal-title').text(title);
         
-        // Default template for unknown items
         let modalContent = `
             <div class="product-image-container mb-4">
                 <img src="${popupImage}" class="img-fluid rounded" alt="${title}">
@@ -128,7 +129,6 @@ $(document).ready(function() {
             </div>
         `;
 
-        // Custom content for each product type
         if (title.includes('Pokemon GO Fest')) {
             modalContent = `
                 <div class="product-image-container mb-4">
@@ -234,8 +234,57 @@ $(document).ready(function() {
             `;
         }
 
-        // Insert the customized content
         $('#productModal .modal-body').html(modalContent);
         $('#productModal').modal('show');
+
+
+
+        //onclick for
+        $(document).on('click', '.featured-product-card', function (e) {
+            // Don't trigger if clicking on the purchase button
+            if ($(e.target).closest('.purchase-btn').length) {
+                return;
+            }
+
+            const popupImage = $(this).data('popup-image');
+            const title = $(this).find('h3').text();
+
+            $('#productModal .modal-title').text(title);
+
+            const modalContent = `
+        <div class="product-image-container mb-4">
+            <img src="${popupImage}" class="img-fluid rounded" alt="${title}">
+            <div class="badge-overlay">FEATURED</div>
+        </div>
+        <p class="text-muted mb-3">Can only be purchased 1 time.</p>
+        <div class="price-container mb-4">
+            <span class="original-price">P450.00</span>
+            <span class="discounted-price">P373.15</span>
+        </div>
+        <hr class="my-4">
+        <div class="features mb-4">
+            <h6 class="text-uppercase font-weight-bold text-muted mb-3">FEATURES</h6>
+            <ul class="pl-3 mb-3">
+                <li class="mb-2"><strong>x1 Eggs-pedition Access: February</strong></li>
+                <li class="mb-2"><strong>x5 Max Revive</strong></li>
+                <li class="mb-2"><strong>x5 Rare Candy</strong></li>
+                <li class="mb-2"><strong>x3 Premium Battle Pass</strong></li>
+            </ul>
+            <a href="#" class="text-primary">View event details</a>
+        </div>
+        <div class="text-center mt-4">
+            <button class="btn btn-primary px-4 py-2 font-weight-bold">Purchase Ticket</button>
+        </div>
+    `;
+
+            $('#productModal .modal-body').html(modalContent);
+            $('#productModal').modal('show');
+        });
+
+        // Keep the purchase button handler
+        $('.purchase-btn').on('click', function (e) {
+            e.stopPropagation();
+            $(this).closest('.featured-product-card').trigger('click');
+        });
     });
 });
