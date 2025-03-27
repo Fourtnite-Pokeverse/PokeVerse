@@ -7,7 +7,7 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link href="homepagestyle.css" rel="stylesheet">
+    <link href="pokemon.css" rel="stylesheet">
      <link rel="icon" href="Logos/Gaming.png">
 
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
@@ -21,7 +21,7 @@
             <span class="text-white h3 ml-2">Web Store</span>
         </div>
         <nav class="nav">
-            <a class="nav-link" href="https://fourtnite-pokeverse.github.io/PokeVerse/WEBDES%20FINALS/codeRedemption.html#">Code Redemption</a>
+            <a class="nav-link" href="#">Code Redemption</a>
             <a class="nav-link" href="#">Event Ticketing</a>
             <a class="btn btn-signup" href="#">Sign Up</a>
         </nav>
@@ -145,7 +145,182 @@
         <section id="itemboxes" class="product-section bg-light">
             <div class="container">
                 <h2 class="text-center mb-5">Item Boxes</h2>
-                <!-- Your item boxes content here -->
+                <div class="cards-container">
+                    <div class="card-wrapper" onclick="openPopModal('pop-modal1')">
+                        <div class="card-banner">Limited-Time Only</div>
+                        <div class="card">
+                            <div class="image-section">
+                                <img src="https://preview.redd.it/l50qtuqbxzs51.png?width=256&format=png&auto=webp&s=afb6d1542af1ea1760458093b0ad5b27e6641bb7" alt="Main Item" class="main-image">
+                                <div class="small-items">
+                                    <div class="item"><img src="https://lh3.googleusercontent.com/ShO4yHIzlVLBWbF_VnNyHJndi3ZNezeh2BV2dVZRbPR7UZxHomeOV25xYB7D5HTfaZCduw_L_f5-VGC48ZxGeEtH4loKgFu1WBpjZADTXZTl=s0" alt="Item 1"><span class="item-count">1</span></div>
+                                    <div class="item"><img src="Rocket_Radar.webp" alt="Item 2"><span class="item-count">5</span></div>
+                                    <div class="item"><img src="https://assets.dittobase.com/go/items/remote-raid-pass.png" alt="Item 3"><span class="item-count">1</span></div>
+                                </div>
+                            </div>
+                            <h2 class="card-title">Deep Depths Ultra Ticket Box</h2>
+                            <h4 class="card-subtitle">Can Only be Purchased 1 Time</h4>
+                            <button class="price-btn">₱59.00</button>
+                        </div>
+                        <div class="timer"><img src="https://png.pngtree.com/png-vector/20220608/ourmid/pngtree-red-clock-icon-on-white-background-png-image_4887940.png" alt="Clock"> 14 Hours Left</div>
+                    </div>
+                    <div class="card-wrapper" onclick="openPopModal('pop-modal2')">
+                        <div class="card-banner">Limited-Time Only</div>
+                        <div class="card">
+                            <div class="image-section">
+                                <img src="https://storage.googleapis.com/platform-webstore-stg-assets/pgo/sku_assets/bundle.general.remotebox.small.1.png" alt="Main Item" class="main-image">
+                                <div class="small-items">
+                                    <div class="item"><img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fitem_ultra_ball.png&w=96&q=75" alt="Item 1"><span class="item-count">5</span></div>
+                                    <div class="item"><img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fitem_postcard_storage_upgrade.png&w=96&q=75" alt="Item 2"><span class="item-count">4</span></div>
+                                    <div class="item"><img src="https://assets.dittobase.com/go/items/remote-raid-pass.png" alt="Item 3"><span class="item-count">5</span></div>
+                                    <div class="item"><img src="https://pokemongohub.net/wp-content/uploads/2018/03/Item_0202.png" alt="Item 3"><span class="item-count">5</span></div>
+                                </div>
+                            </div>
+                            <h2 class="card-title">Go Rocket Box</h2>
+                            <h4 class="card-subtitle">Can Only be Purchased 1 Time</h4>
+                            <button class="price-btn">₱289.00</button>
+                        </div>
+                    </div>
+                    <div class="card-wrapper" onclick="openPopModal('pop-modal3')">
+                        <div class="card-banner">Limited-Time Only</div>
+                        <div class="card">
+                            <div class="image-section">
+                                <img src="Adventure_Box.webp" alt="Main Item" class="main-image">
+                                <div class="small-items">
+                                    <div class="item"><img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fitem_golden_pinap_berry.png&w=96&q=75" alt="Item 1"><span class="item-count">8</span></div>
+                                    <div class="item"><img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fitem_max_boost.png&w=384&q=75" alt="Item 2"><span class="item-count">8</span></div>
+                                    <div class="item"><img src="https://assets.dittobase.com/go/items/remote-raid-pass.png" alt="Item 3"><span class="item-count">4</span></div>
+                                </div>
+                            </div>
+                            <h2 class="card-title">Ultra Raid Box</h2>
+                            <h4 class="card-subtitle">Can Only be Purchased 1 Time</h4>
+                            <button class="price-btn">₱149.00</button>
+                        </div>
+                    </div>
+                    <div class="card-wrapper" onclick="openPopModal('pop-modal4')">
+                        <div class="card-banner">Limited-Time Only</div>
+                        <div class="card">
+                            <div class="image-section">
+                                <img src="Generic_Box_3b.webp" alt="Main Item" class="main-image">
+                                <div class="small-items">
+                                    <div class="item"><img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fitem_incubator_basic.png&w=384&q=75" alt="Item 1"><span class="item-count">2</span></div>
+                                    <div class="item"><img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fitem_incubator_super.png&w=384&q=75" alt="Item 2"><span class="item-count">2</span></div>
+                                    <div class="item"><img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fitem_mp_replenish.png&w=384&q=75" alt="Item 3"><span class="item-count">4</span></div>
+                                </div>
+                            </div>
+                            <h2 class="card-title">Might and Mastery Box</h2>
+                            <h4 class="card-subtitle">Can Only be Purchased 1 Time</h4>
+                            <button class="price-btn">₱149.00</button>
+                        </div>
+                    </div>
+            
+                <!-- Modal1 -->
+                <div id="pop-modal1" class="pop-modal">
+                    <div class="pop-modal-content">
+                        <span class="pop-close" onclick="closePopModal('pop-modal1')">&times;</span>
+                        <div class="pop-image-banner">
+                            <img src="https://preview.redd.it/l50qtuqbxzs51.png?width=256&format=png&auto=webp&s=afb6d1542af1ea1760458093b0ad5b27e6641bb7" alt="Gift Box" class="pop-box1img">
+                            <div class="pop-banner-text">Limited-Time Only</div>
+                        </div>
+                        <div class="pop-modal-title">Deep Depths Ultra Ticket Box</div>
+                        <div class="pop-item-list">
+                            <div class="pop-item">
+                                <img src="https://lh3.googleusercontent.com/ShO4yHIzlVLBWbF_VnNyHJndi3ZNezeh2BV2dVZRbPR7UZxHomeOV25xYB7D5HTfaZCduw_L_f5-VGC48ZxGeEtH4loKgFu1WBpjZADTXZTl=s0" alt="Event Ticket" class="pop-iconimg"> 
+                                <span class="pop-item-count">1x</span> <span class="pop-item-details">Event Ticket</span> 
+                            </div>
+                            <div class="pop-item">
+                                <img src="Rocket_Radar.webp" alt="Rocket Radar" class="pop-iconimg">
+                                <span class="pop-item-count">5x</span><span class="pop-item-details">Rocket Radar</span> 
+                            </div>
+                            <div class="pop-item">
+                                <img src="https://assets.dittobase.com/go/items/remote-raid-pass.png" alt="Remote Raid" class="pop-iconimg">
+                                <span class="pop-item-count">1x</span><span class="pop-item-details">Remote Raid Pass</span>
+                            </div>
+                        </div>
+                        <button class="pop-price-btn">₱59.00</button> <span class="pop-purchase-info">CAN ONLY BE PURCHASED 1 TIME</span>
+                    </div>
+                </div>
+                 <!-- Modal2 -->
+                 <div id="pop-modal2" class="pop-modal">
+                    <div class="pop-modal-content">
+                        <span class="pop-close" onclick="closePopModal('pop-modal1')">&times;</span>
+                        <div class="pop-image-banner">
+                            <img src="https://storage.googleapis.com/platform-webstore-stg-assets/pgo/sku_assets/bundle.general.remotebox.small.1.png" alt="Gift Box" class="pop-box1img">
+                            <div class="pop-banner-text">Limited-Time Only</div>
+                        </div>
+                        <div class="pop-modal-title">GO Rocket Box</div>
+                        <div class="pop-item-list">
+                            <div class="pop-item">
+                                <img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fitem_ultra_ball.png&w=96&q=75" alt="" class="pop-iconimg"> 
+                                <span class="pop-item-count">5x</span> <span class="pop-item-details">Ultra Ball</span> 
+                            </div>
+                            <div class="pop-item">
+                                <img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fitem_postcard_storage_upgrade.png&w=96&q=75" alt="" class="pop-iconimg">
+                                <span class="pop-item-count">4x</span><span class="pop-item-details">Postcard Pages</span> 
+                            </div>
+                            <div class="pop-item">
+                                <img src="https://pokemongohub.net/wp-content/uploads/2017/06/normal-raid-pass.png" alt="" class="pop-iconimg">
+                                <span class="pop-item-count">5x</span><span class="pop-item-details">Remote Raid Pass</span>
+                            </div>
+                            <div class="pop-item">
+                                <img src="https://pokemongohub.net/wp-content/uploads/2018/03/Item_0202.png" alt="" class="pop-iconimg">
+                                <span class="pop-item-count">5x</span><span class="pop-item-details">Max Revive</span>
+                            </div>
+                        </div>
+                        <button class="pop-price-btn">₱289.00</button> <span class="pop-purchase-info">CAN ONLY BE PURCHASED 1 TIME</span>
+                    </div>
+                </div>
+                 <!-- Modal3 -->
+                 <div id="pop-modal3" class="pop-modal">
+                    <div class="pop-modal-content">
+                        <span class="pop-close" onclick="closePopModal('pop-modal1')">&times;</span>
+                        <div class="pop-image-banner">
+                            <img src="Adventure_Box.webp" alt="Gift Box" class="pop-box1img">
+                            <div class="pop-banner-text">Limited-Time Only</div>
+                        </div>
+                        <div class="pop-modal-title">Ultra Raid Box</div>
+                        <div class="pop-item-list">
+                            <div class="pop-item">
+                                <img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fitem_golden_pinap_berry.png&w=96&q=75" alt="" class="pop-iconimg"> 
+                                <span class="pop-item-count">8x</span> <span class="pop-item-details">Silver Pinap Berry</span> 
+                            </div>
+                            <div class="pop-item">
+                                <img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fitem_max_boost.png&w=384&q=75" alt="" class="pop-iconimg">
+                                <span class="pop-item-count">8x</span><span class="pop-item-details">Max Mushroom</span> 
+                            </div>
+                            <div class="pop-item">
+                                <img src="https://pokemongohub.net/wp-content/uploads/2017/06/normal-raid-pass.png" alt="" class="pop-iconimg">
+                                <span class="pop-item-count">4x</span><span class="pop-item-details">Remote Raid Pass</span>
+                            </div>
+                        </div>
+                        <button class="pop-price-btn">₱149.00</button> <span class="pop-purchase-info">CAN ONLY BE PURCHASED 1 TIME</span>
+                    </div>
+                </div>
+                 <!-- Modal4 -->
+                 <div id="pop-modal4" class="pop-modal">
+                    <div class="pop-modal-content">
+                        <span class="pop-close" onclick="closePopModal('pop-modal1')">&times;</span>
+                        <div class="pop-image-banner">
+                            <img src="Generic_Box_3b.webp" alt="Gift Box" class="pop-box1img">
+                            <div class="pop-banner-text">Limited-Time Only</div>
+                        </div>
+                        <div class="pop-modal-title">Might and Mastery Bos</div>
+                        <div class="pop-item-list">
+                            <div class="pop-item">
+                                <img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fitem_incubator_basic.png&w=384&q=75" alt="" class="pop-iconimg"> 
+                                <span class="pop-item-count">2x</span> <span class="pop-item-details">Ultra Ball</span> 
+                            </div>
+                            <div class="pop-item">
+                                <img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fitem_incubator_super.png&w=384&q=75" alt="" class="pop-iconimg">
+                                <span class="pop-item-count">2x</span><span class="pop-item-details">Postcard Pages</span> 
+                            </div>
+                            <div class="pop-item">
+                                <img src="https://store.pokemongolive.com/_next/image?url=https%3A%2F%2Fstorage.googleapis.com%2Fplatform-webstore-rel-assets%2Fpgo%2Fsku_assets%2Fitem_mp_replenish.png&w=384&q=75" alt="" class="pop-iconimg">
+                                <span class="pop-item-count">4x</span><span class="pop-item-details">Remote Raid Pass</span>
+                            </div>
+                        </div>
+                        <button class="pop-price-btn">₱289.00</button> <span class="pop-purchase-info">CAN ONLY BE PURCHASED 1 TIME</span>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -191,7 +366,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="homepage.js"></script>
+    <script src="pokemon.js"></script>
 
     </div>
 </body>
