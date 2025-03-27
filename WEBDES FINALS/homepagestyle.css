@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;700&display=swap');
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Josefin Sans', 'Roboto', 'Garet';
     padding-top: 0;
 }
 
@@ -236,7 +236,7 @@ body {
 }
 
 /* Countdown Timer */
-.countdown-timer {
+.countdown-timer1 {
     position: absolute;
     top: 1.5rem;
     right: 3rem;
@@ -254,7 +254,7 @@ body {
     box-shadow: 0 0 15px rgba(95, 82, 19, 0.4);
 }
 
-.countdown-timer span {
+.countdown-timer1 span {
     font-size: 1.1rem;
     margin-bottom: 5px;
     font-weight: bold;
@@ -262,7 +262,7 @@ body {
     letter-spacing: 1px;
 }
 
-.timer {
+.timer1 {
     font-family: 'Courier New', monospace;
     font-size: 1.8rem;
     font-weight: bold;
@@ -348,21 +348,22 @@ body {
 }
 
 
-/* Featured Section - Larger Container with Fixed Click */
 
 
 .featured-product-card {
-    background: white;
+    background: url("images/featuredbg.webp");
+    object-fit:contain;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     position: relative;
-    height: auto; /* Changed from fixed height */
-    min-height: 220px; /* Minimum height to contain content */
+    height: auto; 
+    min-height: 220px; 
     transition: all 0.3s ease;
     cursor: pointer;
-    margin: 0 auto 20px; /* Added bottom margin */
+    margin: 0 auto 20px; 
     width: 100%;
+    
 }
 
 
@@ -370,7 +371,7 @@ body {
     position: inherit;
     top: 20px;
     left: 20px;
-    background:linear-gradient(to right, #bbb156, #abb155);
+    background:#00AEEF;
     color: white;
     padding: 6px 14px;
     border-radius: 4px;
@@ -380,6 +381,7 @@ body {
     width: 200px;
     margin-left: 40px;
     text-align: center;
+    
 }
 
 .product-details {
@@ -393,17 +395,22 @@ body {
 
 .product-details h3 {
     font-size: 1.8rem;
-    color: #333;
+    color: #ffffff;
     margin-bottom: 12px;
     font-weight: bold;
     padding-right: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 8px;
+    border-radius: 4px;
 }
 
 .product-note {
-    color: #6c757d;
+    color: #28b94a;
     font-size: 1rem;
     margin-bottom: 20px;
     padding-right: 20px;
+    font-weight: 700;
 }
 
 .product-price {
@@ -432,7 +439,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #f8f9fa;
     padding: 30px;
 }
 
@@ -450,17 +456,12 @@ body {
 
 #featured.product-section {
     padding: 20px 0 0;
-    /* Only top padding */
     height: 550px;
-    /* Fixed height */
     min-height: 550px;
-    /* Prevent collapse */
     overflow: hidden;
-    /* Hide anything beyond this height */
 }
 
 
-/* Next section sits flush against it */
 #itemboxes.product-section {
     padding-top: 0;
     margin-top: -10px;
@@ -515,6 +516,7 @@ body {
 .cards-container {
     display: flex;
     gap: 20px;
+    
 }
 
 .card-wrapper {
@@ -522,6 +524,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 
 .card-banner {
@@ -535,7 +538,9 @@ body {
     position: absolute;
     top: -20px;
     z-index: 2;
+    
 }
+
 
 .card {
     width: 250px;
@@ -546,6 +551,12 @@ body {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     border: 3px solid #000000;
     position: relative;
+    
+}
+
+.card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
 .image-section {
