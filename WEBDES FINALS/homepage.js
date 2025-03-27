@@ -1,807 +1,370 @@
-@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;700&display=swap');
-
-body {
-    font-family: 'Josefin Sans', 'Roboto', 'Garet';
-    padding-top: 0;
-}
-
-/* Header */
-.header {
-    background: linear-gradient(to right, #6a11cb, #2575fc);
-    padding: 0.6rem 1rem;
-    height: 60px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 1020;
-}
-
-
-body {
-    overflow-x: hidden;
-    position: relative;
-}
-
-/* Ensure sections have proper positioning */
-.product-section {
-    scroll-margin-top: 80px;
-    /* This creates space when scrolling to section */
-}
-
-.header .nav-link {
-    color: white;
-    font-size: 1.2rem;
-    padding: 0.5rem 0.8rem;
-    font-weight: bold;
-}
-
-.header .btn-signup {
-    background-color: white;
-    color: #007bff;
-    padding: 0.5rem 0.8rem;
-    font-size: 1.2rem;
-    margin: 0 2rem;
-    font-weight: bold;
-}
-
-/* Sticky Navigation */
-.sticky-nav-container {
-    position: sticky;
-    top: 60px; /* Header height */
-    z-index: 1010;
-    background-color: white;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-}
-
-.sticky-nav .nav-tabs {
-    border-bottom: none;
-    justify-content: center;
-}
-
-.sticky-nav .nav-link {
-    color: #6c757d;
-    font-weight: bold;
-    padding: 8px 20px;
-    border: none !important;
-}
-
-.sticky-nav .nav-link.active {
-    color: #28a745;
-    background-color: transparent;
-    border-bottom: 3px solid #28a745 !important;
-}
-
-.sticky-nav .nav-link:hover {
-    color: #28a745;
-}
-
-/* Banner & Carousel */
-.banner {
-    position: relative;
-    cursor: pointer;
-}
-
-.banner img {
-    width: 100%;
-    height: 700px;
-    object-fit: cover;
-}
-
-.banner .badge {
-    position: absolute;
-    top: 1rem;
-    left: 3rem;
-    background-color: #28a745;
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 0.25rem;
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    z-index: 10;
-}
-
-.banner .title {
-    position: absolute;
-    top: 4rem;
-    left: 3rem;
-    color: white;
-    font-size: 3rem;
-    font-weight: bold;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
-    background-color: rgba(0, 0, 0, 0.4);
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    
-}
-
-/* Carousel Controls */
-.banner .carousel-control-prev,
-.banner .carousel-control-next {
-    width: 50px;
-    height: 80px;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    border-radius: 5px;
-    opacity: 0.9;
-    transition: all 0.3s ease;
-}
-
-.banner .carousel-control-prev:hover,
-.banner .carousel-control-next:hover {
-    background-color: rgba(0, 0, 0, 0.7);
-    opacity: 1;
-}
-
-.banner .carousel-control-prev {
-    left: 20px;
-}
-
-.banner .carousel-control-next {
-    right: 20px;
-}
-
-/* Carousel Indicators */
-.carousel-indicators {
-    position: absolute;
-    bottom: 1.5rem;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    padding: 0.5rem;
-    background-color: rgba(0, 0, 0, 0.3);
-    border-radius: 20px;
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    z-index: 15;
-    width: max-content;
-}
-
-.pokeball-indicators li {
-    width: 24px;
-    height: 24px;
-    margin: 0 8px;
-    background: url('Icons/indicatorpokeball.webp') no-repeat center/contain;
-    opacity: 0.7;
-    border: none;
-    transition: all 0.3s ease;
-    text-indent: -9999px;
-}
-
-.pokeball-indicators .active {
-    opacity: 1;
-    transform: scale(1.2);
-    filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.8));
-}
-
-/* Transitions */
-.carousel-item {
-    transition: transform 0.8s ease-in-out;
-}
-
-.carousel-item .title h1,
-.carousel-item .badge,
-.carousel-item .cta-btn {
-    transition: all 0.6s ease;
-    opacity: 0;
-    transform: translateY(20px);
-}
-
-.carousel-item.active .title h1,
-.carousel-item.active .badge,
-.carousel-item.active .cta-btn {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.carousel-item.active .badge {
-    transition-delay: 0.2s;
-}
-
-.carousel-item.active .title h1 {
-    transition-delay: 0.4s;
-}
-
-.carousel-item.active .cta-btn {
-    transition-delay: 0.6s;
-}
-
-/* CTA Button */
-.cta-btn {
-    position: absolute;
-    bottom: 100px;
-    left: 46%;
-    transform: translateX(-50%);
-    background:linear-gradient(to right, #6a11cb, #2575fc);
-    color: white;
-    padding: 12px 30px;
-    border-radius: 30px;
-    border: none;
-    font-weight: bold;
-    cursor: pointer;
-    z-index: 10;
-    transition: all 0.3s ease;
-    width: max-content;
-    margin: 0 auto;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-}
-
-.cta-btn:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-}
-
-/* Countdown Timer */
-.countdown-timer1 {
-    position: absolute;
-    top: 1.5rem;
-    right: 3rem;
-    background: rgba(0,0,0,0.8);
-    padding: 12px 20px;
-    border-radius: 30px;
-    color: white;
-    text-align: center;
-    z-index: 10;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-width: 180px;
-    border: 2px solid #28a745;
-    box-shadow: 0 0 15px rgba(95, 82, 19, 0.4);
-}
-
-.countdown-timer1 span {
-    font-size: 1.1rem;
-    margin-bottom: 5px;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.timer1 {
-    font-family: 'Courier New', monospace;
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #28a745;
-    line-height: 1;
-    letter-spacing: 2px;
-}
-
-/* Content Sections */
-.product-section {
-    padding: 60px 0;
-    min-height: 100vh;
-}
-
-/* Product Modal Styles */
-#productModal .modal-content {
-    border-radius: 12px;
-    overflow: hidden;
-    border: none;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-}
-
-#productModal .modal-lg {
-    max-width: 600px;
-}
-
-.product-image-container {
-    position: relative;
-    border-radius: 10px;
-    overflow: hidden;
-}
-
-.product-image-container img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.badge-overlay {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    background-color: #28a745;
-    color: white;
-    padding: 5px 15px;
-    border-radius: 20px;
-    font-weight: bold;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-}
-
-.price-container {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.original-price {
-    font-size: 1.2rem;
-    text-decoration: line-through;
-    color: #6c757d;
-}
-
-.discounted-price {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #28a745;
-}
-
-#productModal .btn-primary {
-    background:linear-gradient(to right, #6a11cb, #2575fc);
-    border: none;
-    border-radius: 8px;
-    transition: all 0.3s;
-    min-width: 200px;
-    padding: 10px 30px;
-}
-
-#productModal .btn-primary:hover {
-    background-color: #5a58c4;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-
-
-
-.featured-product-card {
-    background: url("images/featuredbg.webp");
-    object-fit:contain;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    position: relative;
-    height: auto; 
-    min-height: 220px; 
-    transition: all 0.3s ease;
-    cursor: pointer;
-    margin: 0 auto 20px; 
-    width: 100%;
-    
-}
-
-
-.featured-badge {
-    position: inherit;
-    top: 20px;
-    left: 20px;
-    background:#00AEEF;
-    color: white;
-    padding: 6px 14px;
-    border-radius: 4px;
-    font-weight: bolder;
-    font-size: 0.9rem;
-    z-index: 10;
-    width: 200px;
-    margin-left: 40px;
-    text-align: center;
-    
-}
-
-.product-details {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 40px 30px 30px 60px;
-    /* Increased padding */
-}
-
-.product-details h3 {
-    font-size: 1.8rem;
-    color: #ffffff;
-    margin-bottom: 12px;
-    font-weight: bold;
-    padding-right: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 8px;
-    border-radius: 4px;
-}
-
-.product-note {
-    color: #28b94a;
-    font-size: 1rem;
-    margin-bottom: 20px;
-    padding-right: 20px;
-    font-weight: 700;
-}
-
-.product-price {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #28a745;
-    margin: 15px 0;
-}
-
-.purchase-btn {
-    background:linear-gradient(to right, #6a11cb, #2575fc);
-    border: none;
-    padding: 10px 30px;
-    font-weight: bold;
-    border-radius: 5px;
-    font-size: 1.1rem;
-    width: fit-content;
-    transition: all 0.3s ease;
-    position: relative;
-    z-index: 11;
-    /* Above card */
-}
-
-.product-image-container {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 30px;
-}
-
-.featured-image {
-    max-height: 250px;
-    width: auto;
-    max-width: 250px;
-    object-fit:fill;
-    transition: transform 0.3s ease;
-}
-
-.featured-product-card{
-    height: 350px;
-}
-
-#featured.product-section {
-    padding: 20px 0 0;
-    height: 550px;
-    min-height: 550px;
-    overflow: hidden;
-}
-
-
-#itemboxes.product-section {
-    padding-top: 0;
-    margin-top: -10px;
-    /* Pulls section up */
-}
-
-/* Hover Effects */
-.featured-product-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-}
-
-.featured-product-card:hover .featured-image {
-    transform: scale(1.05);
-}
-
-.featured-product-card:hover .purchase-btn {
-    background-color: #5a58c4;
-}
-
-@media (max-width: 768px) {
-    .featured-product-card {
-        height: auto;
-        min-height: 250px;
-    }
-
-    .product-details {
-        padding: 30px 20px 20px 45px;
-    }
-
-    .product-details h3 {
-        font-size: 1.5rem;
-    }
-
-    .product-price {
-        font-size: 1.8rem;
-    }
-
-    .purchase-btn {
-        margin: 15px 0;
-    }
-
-    .product-image-container {
-        padding: 20px;
-    }
-
-    .featured-image {
-        max-height: 160px;
+// Function to open modal 
+function openPopModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        modal.style.display = "block";
+        document.body.style.overflow = "hidden";
+
+        document.querySelectorAll(".card-banner, .timer1").forEach(el => {
+            el.style.display = "none";
+        });
     }
 }
 
-.cards-container {
-    display: flex;
-    gap: 20px;
+function closeAllModals() {
+    document.querySelectorAll(".pop-modal").forEach(modal => {
+        modal.style.display = "none";
+    });
+    document.body.style.overflow = "auto";
+
+
+    document.querySelectorAll(".card-banner, .timer1").forEach(el => {
+        el.style.display = "block";
+    });
+}
+
+
+function closePopModal(modalId) {
+    const modal = document.getElementById(modalId);
+    if (modal) {
+        closeAllModals();
+    }
+}
+
+window.onclick = function (event) {
+    document.querySelectorAll(".pop-modal").forEach(modal => {
+        if (event.target === modal) {
+            closeAllModals();
+        }
+    });
+};
+
+$(document).ready(function() {
+    console.log("jQuery version:", $.fn.jquery);
+
+
+    $('.sticky-nav .nav-link').on('click', function(e) {
+        e.preventDefault();
+        const targetId = $(this).attr('href');
+        const targetSection = $(targetId); // Get section by ID
+        
+        if (targetSection.length) {
+            console.log('Scrolling to section with ID:', targetId);
+            
+            // Update active class
+            $('.sticky-nav .nav-link').removeClass('active');
+            $(this).addClass('active');
+            
+            // Scroll to section
+            $('html, body').animate({
+                scrollTop: targetSection.offset().top - 60
+            }, 800);
+        } else {
+            console.error('Section not found with ID:', targetId);
+        }
+    });
+
+
+    $(window).on('scroll', function() {
+        const scrollPosition = $(window).scrollTop() + 100;
+        
+        $('.product-section').each(function() {
+            const sectionTop = $(this).offset().top;
+            const sectionBottom = sectionTop + $(this).outerHeight();
+            const sectionId = '#' + $(this).attr('id');
+            
+            if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                $('.sticky-nav .nav-link').removeClass('active');
+                $(`.sticky-nav .nav-link[href="${sectionId}"]`).addClass('active');
+            }
+        });
+    });
+
+
+    $(window).trigger('scroll');
+
+    // ======================
+    // Carousel Initialization
+    // ======================
+    $('#carouselExampleIndicators').carousel({
+        interval: 5000,
+        pause: "hover",
+        wrap: true
+    });
     
-}
-
-.card-wrapper {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    $('#carouselExampleIndicators').on('slid.bs.carousel', function () {
+        $(this).find('.carousel-item').removeClass('animated');
+        $(this).find('.carousel-item.active').addClass('animated');
+    }).trigger('slid.bs.carousel');
     
+    $('.pokeball-indicators li').hover(
+        function() {
+            $(this).css('transform', 'scale(1.1)');
+        },
+        function() {
+            if (!$(this).hasClass('active')) {
+                $(this).css('transform', 'scale(1)');
+            }
+        }
+    );
+
+    // ======================
+    // Countdown Timer
+    // ======================
+    function startCountdown() {
+        const timerElement = document.getElementById("eventCountdown");
+        
+        if (!timerElement) {
+            console.error("Error: Could not find element with ID 'eventCountdown'");
+            return;
+        }
+
+        const endTime = new Date();
+        endTime.setHours(endTime.getHours() + 24);
+
+        function updateTimer() {
+            const now = new Date();
+            const timeLeft = endTime - now;
+
+            if (timeLeft <= 0) {
+                timerElement.textContent = "00:00:00";
+                return;
+            }
+
+            const hours = Math.floor(timeLeft / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+            timerElement.textContent = 
+                `${hours.toString().padStart(2, '0')} : ${minutes.toString().padStart(2, '0')} : ${seconds.toString().padStart(2, '0')}`;
+        }
+
+        updateTimer();
+        setInterval(updateTimer, 1000);
+    }
+
+    startCountdown();
+
+    // ======================
+    // Product Modal Functionality
+    // ======================
+    $('.carousel-item, .cta-btn').click(function(e) {
+        if ($(e.target).hasClass('cta-btn') || $(e.target).closest('.cta-btn').length) {
+            e.stopPropagation();
+        }
+        
+        const activeSlide = $('.carousel-item.active');
+        const title = activeSlide.find('h1').text();
+        const popupImage = activeSlide.data('popup-image');
+        const badgeText = activeSlide.find('.badge').text();
+        
+        $('#productModal .modal-title').text(title);
+        
+        let modalContent = `
+            <div class="product-image-container mb-4">
+                <img src="${popupImage}" class="img-fluid rounded" alt="${title}">
+                <div class="badge-overlay">${badgeText}</div>
+            </div>
+            <div class="text-center mt-4">
+                <button class="btn btn-primary px-4 py-2 font-weight-bold">Purchase</button>
+            </div>
+        `;
+
+        if (title.includes('Pokemon GO Fest')) {
+            modalContent = `
+                <div class="product-image-container mb-4">
+                    <img src="${popupImage}" class="img-fluid rounded" alt="${title}">
+                    <div class="badge-overlay">${badgeText}</div>
+                </div>
+                <p class="text-muted mb-3">Can only be purchased 1 time.</p>
+                <div class="price-container mb-4">
+                    <span class="original-price">P450.00</span>
+                    <span class="discounted-price">P373.15</span>
+                </div>
+                <hr class="my-4">
+                <div class="features mb-4">
+                    <h6 class="text-uppercase font-weight-bold text-muted mb-3">FEATURES</h6>
+                    <ul class="pl-3 mb-3">
+                        <li class="mb-2"><strong>x1 Eggs-pedition Access: February</strong></li>
+                        <li class="mb-2"><strong>x5 Max Revive</strong></li>
+                        <li class="mb-2"><strong>x5 Rare Candy</strong></li>
+                        <li class="mb-2"><strong>x3 Premium Battle Pass</strong></li>
+                    </ul>
+                    <a href="#" class="text-primary">View event details</a>
+                </div>
+                <div class="text-center mt-4">
+                    <button class="btn btn-primary px-4 py-2 font-weight-bold">Purchase Ticket</button>
+                </div>
+            `;
+        }
+        else if (title.includes('PokéCoin Bundle')) {
+            modalContent = `
+                <div class="product-image-container mb-4">
+                    <img src="${popupImage}" class="img-fluid rounded" alt="${title}">
+                    <div class="badge-overlay">${badgeText}</div>
+                </div>
+                <p class="text-muted mb-3">Special limited-time offer.</p>
+                <div class="price-container mb-4">
+                    <span class="original-price">P299.00</span>
+                    <span class="discounted-price">P249.00</span>
+                </div>
+                <hr class="my-4">
+                <div class="features mb-4">
+                    <h6 class="text-uppercase font-weight-bold text-muted mb-3">CONTENTS</h6>
+                    <ul class="pl-3 mb-3">
+                        <li class="mb-2"><strong>1200 PokéCoins</strong></li>
+                        <li class="mb-2"><strong>+100 Bonus PokéCoins</strong></li>
+                        <li class="mb-2"><strong>Limited-time exclusive</strong></li>
+                    </ul>
+                </div>
+                <div class="text-center mt-4">
+                    <button class="btn btn-primary px-4 py-2 font-weight-bold">Buy PokéCoins</button>
+                </div>
+            `;
+        }
+        else if (title.includes('Item Boxes')) {
+            modalContent = `
+                <div class="product-image-container mb-4">
+                    <img src="${popupImage}" class="img-fluid rounded" alt="${title}">
+                    <div class="badge-overlay">${badgeText}</div>
+                </div>
+                <p class="text-muted mb-3">Exclusive item collection.</p>
+                <div class="price-container mb-4">
+                    <span class="original-price">P199.00</span>
+                    <span class="discounted-price">P159.00</span>
+                </div>
+                <hr class="my-4">
+                <div class="features mb-4">
+                    <h6 class="text-uppercase font-weight-bold text-muted mb-3">BOX CONTENTS</h6>
+                    <ul class="pl-3 mb-3">
+                        <li class="mb-2"><strong>20 Poké Balls</strong></li>
+                        <li class="mb-2"><strong>10 Great Balls</strong></li>
+                        <li class="mb-2"><strong>5 Ultra Balls</strong></li>
+                        <li class="mb-2"><strong>3 Incense</strong></li>
+                        <li class="mb-2"><strong>2 Lucky Eggs</strong></li>
+                    </ul>
+                </div>
+                <div class="text-center mt-4">
+                    <button class="btn btn-primary px-4 py-2 font-weight-bold">Get Item Box</button>
+                </div>
+            `;
+        }
+        else if (title.includes('Daily Bundles')) {
+            modalContent = `
+                <div class="product-image-container mb-4">
+                    <img src="${popupImage}" class="img-fluid rounded" alt="${title}">
+                    <div class="badge-overlay">DAILY DEAL</div>
+                </div>
+                <p class="text-muted mb-3">Available for 24 hours only.</p>
+                <div class="price-container mb-4">
+                    <span class="discounted-price">P99.00</span>
+                </div>
+                <hr class="my-4">
+                <div class="features mb-4">
+                    <h6 class="text-uppercase font-weight-bold text-muted mb-3">TODAY'S BUNDLE</h6>
+                    <ul class="pl-3 mb-3">
+                        <li class="mb-2"><strong>10 Poké Balls</strong></li>
+                        <li class="mb-2"><strong>5 Razz Berries</strong></li>
+                        <li class="mb-2"><strong>1 Incense</strong></li>
+                        <li class="mb-2"><strong>1 Star Piece</strong></li>
+                    </ul>
+                </div>
+                <div class="text-center mt-4">
+                    <button class="btn btn-primary px-4 py-2 font-weight-bold">Get Daily Bundle</button>
+                </div>
+            `;
+        }
+
+        $('#productModal .modal-body').html(modalContent);
+        $('#productModal').modal('show');
+
+
+
+        //onclick for
+        $(document).on('click', '.featured-product-card', function (e) {
+            // Don't trigger if clicking on the purchase button
+            if ($(e.target).closest('.purchase-btn').length) {
+                return;
+            }
+
+            const popupImage = $(this).data('popup-image');
+            const title = $(this).find('h3').text();
+
+            $('#productModal .modal-title').text(title);
+
+            const modalContent = `
+        <div class="product-image-container mb-4">
+            <img src="${popupImage}" class="img-fluid rounded" alt="${title}">
+            <div class="badge-overlay">FEATURED</div>
+        </div>
+        <p class="text-muted mb-3">Can only be purchased 1 time.</p>
+        <div class="price-container mb-4">
+            <span class="original-price">P450.00</span>
+            <span class="discounted-price">P373.15</span>
+        </div>
+        <hr class="my-4">
+        <div class="features mb-4">
+            <h6 class="text-uppercase font-weight-bold text-muted mb-3">FEATURES</h6>
+            <ul class="pl-3 mb-3">
+                <li class="mb-2"><strong>x1 Eggs-pedition Access: February</strong></li>
+                <li class="mb-2"><strong>x5 Max Revive</strong></li>
+                <li class="mb-2"><strong>x5 Rare Candy</strong></li>
+                <li class="mb-2"><strong>x3 Premium Battle Pass</strong></li>
+            </ul>
+            <a href="#" class="text-primary">View event details</a>
+        </div>
+        <div class="text-center mt-4">
+            <button class="btn btn-primary px-4 py-2 font-weight-bold">Purchase Ticket</button>
+        </div>
+    `;
+
+            $('#productModal .modal-body').html(modalContent);
+            $('#productModal').modal('show');
+        });
+
+        // Keep the purchase button handler
+        $('.purchase-btn').on('click', function (e) {
+            e.stopPropagation();
+            $(this).closest('.featured-product-card').trigger('click');
+        });
+    });
+});
+
+// Function to toggle profile menu
+function toggleProfileMenu() {
+    const profileMenu = document.getElementById('profileMenu');
+    profileMenu.classList.toggle('show');
 }
 
-.card-banner {
-    font-family: "Pixelify Sans", sans-serif;
-    font-weight: 700;
-    background: linear-gradient(to right, #00AEEF, #ec5dec);
-    color: white;
-    padding: 5px 15px;
-    border-radius: 10px;
-    font-weight: bold;
-    position: absolute;
-    top: -20px;
-    z-index: 2;
+// Close profile menu when clicking outside
+document.addEventListener('click', function(event) {
+    const profileDropdown = document.querySelector('.profile-dropdown');
+    const profileMenu = document.getElementById('profileMenu');
     
+    if (!profileDropdown.contains(event.target) && profileMenu.classList.contains('show')) {
+        profileMenu.classList.remove('show');
+    }
+});
+
+// Function to generate a random number between min and max
+function getRandomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-
-.card {
-    width: 250px;
-    background: white;
-    border-radius: 10px;
-    padding: 15px;
-    text-align: center;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    border: 3px solid #000000;
-    position: relative;
-    
+// Function to generate and format Player ID
+function generatePlayerId() {
+    let id = '';
+    for (let i = 0; i < 12; i++) {
+        id += getRandomNumber(0, 9);
+    }
+    // Format the ID as #### #### ####
+    return id.replace(/(\d{4})(?=\d)/g, '$1 ');
 }
 
-.card:hover{
-    transform: translateY(-5px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-}
-
-.image-section {
-    position: relative;
-    background: url('https://img.freepik.com/free-vector/gradient-zoom-effect-background_23-2149751078.jpg') center/cover;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-.main-image {
-    width: 80%;
-    display: block;
-    margin: 0 auto;
-}
-
-.small-items {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-    gap: 5px;
-}
-
-.item {
-    display: flex;
-    align-items: center;
-    position: relative;
-}
-
-.item img {
-    width: 40px;
-    border-radius: 50%;
-}
-
-.item-count {
-    position: absolute;
-    bottom: -5px;
-    right: -5px;
-    background: linear-gradient(to right, pink, blue);
-    color: white;
-    padding: 3px 7px;
-    border-radius: 50%;
-    font-weight: bold;
-}
-
-.card-title {
-    color: #00AEEF;
-    margin: 10px 0 5px;
-    font-size: 18px;
-}
-
-.card-subtitle {
-    font-family: "Pixelify Sans", sans-serif;
-    font-weight: 700;
-    font-size: 14px;
-    color: rgba(122, 120, 120, 0.459);
-}
-
-.price-btn {
-    background: linear-gradient(to right, #00AEEF, #ec5dec);
-    color: white;
-    border: none;
-    padding: 10px;
-    width: 100%;
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-.timer {
-    font-family: "Pixelify Sans", sans-serif;
-    position: absolute;
-    bottom: -15px;
-    left: 10px;
-    background: linear-gradient(to right, #00AEEF, #FF69B4);
-    padding: 5px;
-    color: white;
-    border-radius: 5px;
-    font-size: 12px;
-    display: flex;
-    align-items: center;
-    z-index: 2;
-}
-
-.timer img {
-    width: 15px;
-    margin-right: 5px;
-}
-
-
-.pop-modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.5);
-}
-
-.pop-modal-content {
-    background-color: white;
-    margin: 10% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 320px;
-    border-radius: 10px;
-    text-align: center;
-    position: relative;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-}
-
-.pop-close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    z-index: 10;
-    background: linear-gradient(to right, #00AEEF, #ec5dec);
-    color: white;
-    padding: 5px 10px;
-    border: none;
-    border-radius: 50%;
-    font-size: 20px;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-.pop-close:hover {
-    background: linear-gradient(to right, #008dcf, #c13eb9);
-}
-
-.pop-image-banner {
-    position: relative;
-    background: url("https://img.freepik.com/free-vector/gradient-zoom-effect-background_23-2149751078.jpg?semt=ais_hybrid") center/cover;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    overflow: hidden;
-}
-
-.pop-banner-text {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    background: linear-gradient(to right, #00AEEF, #FF69B4);
-    color: white;
-    padding: 5px 10px;
-    border-radius: 10px;
-    font-weight: bold;
-    font-size: 12px;
-    font-family: "Pixelify Sans", sans-serif;
-}
-
-.pop-box1img {
-    width: 100%;
-    border-radius: 10px;
-}
-
-.pop-modal-title {
-    font-weight: bold;
-    font-size: 1.5em;
-    color: #00AEEF;
-    margin-top: 10px;
-}
-
-.pop-item-list {
-    margin: 10px 0;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.pop-item {
-    display: flex;
-    align-items: center;
-    background: #f0f0f0;
-    padding: 8px;
-    border-radius: 8px;
-}
-
-.pop-iconimg {
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    margin-right: 15px; 
-}
-
-.pop-item-details {
-    font-family: "Pixelify Sans", sans-serif;
-    display: flex;
-    align-items: center;
-    gap: 5px; 
-    flex-grow: 1;
-}
-
-.pop-item-count {
-    background: linear-gradient(to right, #00AEEF, #ec5dec);
-    color: white;
-    font-size: 12px;
-    font-weight: bold;
-    padding: 3px 7px;
-    border-radius: 50%;
-}
-
-.pop-bottom-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.pop-price-container {
-    display: flex;
-    align-items: center;
-    gap: 20px; 
-}
-
-.pop-price-btn {
-    background: linear-gradient(to right, #00AEEF, #ec5dec);
-    color: white;
-    border: none;
-    padding: 12px;
-    width: auto;
-    min-width: 100px;
-    border-radius: 50px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    text-align: center;
-}
-
-.pop-price-btn:hover {
-    background: linear-gradient(to right, #008dcf, #c13eb9);
-}
-
-.pop-purchase-info {
-    font-family: "Pixelify Sans", sans-serif;
-    font-size: 12px;
-    font-weight: bold;
-    color: #45424280;
-    white-space: nowrap;
-}
+// Set the Player ID when the page loads
+document.addEventListener('DOMContentLoaded', () => {
+    const displayPlayerId = document.getElementById('displayPlayerId');
+    if (displayPlayerId) {
+        displayPlayerId.textContent = generatePlayerId();
+    }
+});
