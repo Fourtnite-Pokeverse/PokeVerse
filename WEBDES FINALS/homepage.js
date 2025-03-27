@@ -5,7 +5,7 @@ function openPopModal(modalId) {
         modal.style.display = "block";
         document.body.style.overflow = "hidden";
 
-        document.querySelectorAll(".card-banner, .timer").forEach(el => {
+        document.querySelectorAll(".card-banner, .timer1").forEach(el => {
             el.style.display = "none";
         });
     }
@@ -18,7 +18,7 @@ function closeAllModals() {
     document.body.style.overflow = "auto";
 
 
-    document.querySelectorAll(".card-banner, .timer").forEach(el => {
+    document.querySelectorAll(".card-banner, .timer1").forEach(el => {
         el.style.display = "block";
     });
 }
