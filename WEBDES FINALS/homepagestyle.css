@@ -361,9 +361,8 @@ body {
     min-height: 220px; 
     transition: all 0.3s ease;
     cursor: pointer;
-    margin: 0 auto 20px; 
     width: 100%;
-    
+    margin-top: 20px;
 }
 
 
@@ -804,4 +803,100 @@ body {
     font-weight: bold;
     color: #45424280;
     white-space: nowrap;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+}
+
+.social-icons a {
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #007bff !important;
+}
+
+/* Profile Dropdown Styles */
+.profile-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 1rem;
+}
+
+.profile-btn:hover {
+    color: #4481eb;
+}
+
+.profile-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: white;
+    min-width: 250px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    z-index: 1000;
+    margin-top: 10px;
+}
+
+.profile-menu.show {
+    display: block;
+}
+
+.profile-header {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.username {
+    font-weight: bold;
+    color: #333;
+}
+
+.player-id {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.profile-links {
+    padding: 10px 0;
+}
+
+.profile-link {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.profile-link:hover {
+    background-color: #f5f5f5;
+    color: #4481eb;
+}
+
+.profile-link i {
+    margin-right: 10px;
+    width: 20px;
+    text-align: center;
 }
