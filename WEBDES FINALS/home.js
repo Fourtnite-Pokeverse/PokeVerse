@@ -380,96 +380,102 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
      // Define a mapping of PokéCoin titles to their respective HTML files
-const coinPageMap = {
-    "110 PokéCoins": "DOneTencoins.html",
-    "600 PokéCoins": "600coins.html",
-    "1,300 PokéCoins": "1300coins.html",
-    "2,700 PokéCoins": "2700coins.html",
-    "5,600 PokéCoins": "5600coins.html",
-    "15,500 PokéCoins": "15500coins.html",
-    "18,800 PokéCoins": "18800coins.html",
-    "20,000 PokéCoins": "20000coins.html"
-};
+    document.addEventListener("DOMContentLoaded", function () {
+    // Define a mapping of PokéCoin titles to their respective HTML files
+    const coinPageMap = {
+        "110 PokéCoins": "110coins.html",
+        "600 PokéCoins": "600coins.html",
+        "1,300 PokéCoins": "1300coins.html",
+        "2,700 PokéCoins": "2700coins.html",
+        "5,600 PokéCoins": "5600coins.html",
+        "15,500 PokéCoins": "15500coins.html",
+        "18,800 PokéCoins": "18800coins.html",
+        "20,000 PokéCoins": "20000coins.html"
+    };
 
-// Select modal
-const modal = document.querySelector(".pokecoin-modal");
+    // Select modal
+    const modal = document.querySelector(".pokecoin-modal");
 
-// Add click event to each PokéCoin item
-document.querySelectorAll(".pokecoin-carousel-item").forEach(item => {
-    item.addEventListener("click", function() {
-        const title = item.querySelector(".pokecoin-title").textContent.trim();
-        const price = item.querySelector(".pokecoin-price").textContent;
-        const bonusInfo = item.querySelector(".pokecoin-bonus-info").innerHTML;
-        const image = item.querySelector("img").src;
+    // Ensure carousel items can be clicked
+    document.querySelectorAll(".pokecoin-carousel-item").forEach(item => {
+        item.style.cursor = "pointer"; // Ensure cursor changes on hover
 
-        // Find the corresponding HTML file from the mapping
-        const pageName = coinPageMap[title] || "error.html"; // Fallback page if title not found
+        item.addEventListener("click", function () {
+            const title = item.querySelector(".pokecoin-title").textContent.trim();
+            const price = item.querySelector(".pokecoin-price").textContent;
+            const bonusInfo = item.querySelector(".pokecoin-bonus-info").innerHTML;
+            const image = item.querySelector("img").src;
 
-        // Update modal content
-        const modalContent = document.querySelector(".pokecoin-modal-content");
-        modalContent.innerHTML = `
-            <span class="pokecoin-close">&times;</span>
-            <img src="${image}" alt="${title}" style="width: 150px; margin-bottom: 15px;">
-            <h2 style="color: #333; margin-bottom: 10px;">${title}</h2>
-            <p style="color: #ff1493; font-size: 24px; font-weight: bold; margin: 15px 0;">${price}</p>
-            <div style="background: linear-gradient(90deg, #8a2be2, #ff1493); color: white; padding: 15px; border-radius: 10px; margin: 15px 0;">
-                ${bonusInfo}
-            </div>
-            <button class="pokecoin-buy-now" data-link="${pageName}" style="margin-top: 15px;">Buy Now</button>
-        `;
+            // Find the corresponding HTML file from the mapping
+            const pageName = coinPageMap[title] || "error.html"; // Fallback page if title not found
 
-        // Show modal
-        modal.classList.add("show");
+            // Update modal content
+            const modalContent = document.querySelector(".pokecoin-modal-content");
+            modalContent.innerHTML = `
+                <span class="pokecoin-close">&times;</span>
+                <img src="${image}" alt="${title}" style="width: 150px; margin-bottom: 15px;">
+                <h2 style="color: #333; margin-bottom: 10px;">${title}</h2>
+                <p style="color: #ff1493; font-size: 24px; font-weight: bold; margin: 15px 0;">${price}</p>
+                <div style="background: linear-gradient(90deg, #8a2be2, #ff1493); color: white; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                    ${bonusInfo}
+                </div>
+                <button class="pokecoin-buy-now" data-link="${pageName}" style="margin-top: 15px;">Buy Now</button>
+            `;
 
-        // Add event listener to Buy Now button (ensures it redirects to the correct page)
-        document.querySelector(".pokecoin-buy-now").addEventListener("click", function() {
-            window.location.href = this.getAttribute("data-link");
+            // Show modal
+            modal.classList.add("show");
+
+            // Add event listener to Buy Now button (ensures it redirects to the correct page)
+            document.querySelector(".pokecoin-buy-now").addEventListener("click", function () {
+                window.location.href = this.getAttribute("data-link");
+            });
         });
     });
-});
 
-// Close modal when clicking the close button
-document.addEventListener("click", function(event) {
-    if (event.target.classList.contains("pokecoin-close")) {
-        modal.classList.remove("show");
-    }
-});
-
-// Close modal when clicking outside the modal
-window.addEventListener("click", function(event) {
-    if (event.target === modal) {
-        modal.classList.remove("show");
-    }
-});
-
-// Function to scroll the PokéCoins carousel smoothly
-function scrollPokecoinCarousel(direction) {
-    const carousel = document.querySelector(".pokecoin-carousel");
-    const carouselItems = document.querySelectorAll(".pokecoin-carousel-item");
-    const itemWidth = carouselItems[0].offsetWidth + 30; // Include gap (30px)
-    const totalItems = carouselItems.length;
-    const itemsPerView = 3; 
-    const scrollItems = 3; 
-    
-    let currentPosition = parseInt(carousel.getAttribute('data-position') || '0');
-    const maxScrollPosition = (totalItems - itemsPerView) * itemWidth;
-    
-    if (direction === 1) { // Scroll right
-        currentPosition += (itemWidth * scrollItems);
-        if (currentPosition >= maxScrollPosition) {
-            currentPosition = maxScrollPosition;
+    // Close modal when clicking the close button
+    document.addEventListener("click", function (event) {
+        if (event.target.classList.contains("pokecoin-close")) {
+            modal.classList.remove("show");
         }
-    } else if (direction === -1) { // Scroll left
-        currentPosition -= (itemWidth * scrollItems);
-        if (currentPosition < 0) {
-            currentPosition = 0;
+    });
+
+    // Close modal when clicking outside the modal
+    window.addEventListener("click", function (event) {
+        if (event.target === modal) {
+            modal.classList.remove("show");
         }
+    });
+
+    // Function to scroll the PokéCoins carousel smoothly
+    function scrollPokecoinCarousel(direction) {
+        const carousel = document.querySelector(".pokecoin-carousel");
+        const carouselItems = document.querySelectorAll(".pokecoin-carousel-item");
+        const itemWidth = carouselItems[0].offsetWidth + 30; // Include gap (30px)
+        const totalItems = carouselItems.length;
+        const itemsPerView = 3;
+        const scrollItems = 3;
+
+        let currentPosition = parseInt(carousel.getAttribute('data-position') || '0');
+        const maxScrollPosition = (totalItems - itemsPerView) * itemWidth;
+
+        if (direction === 1) { // Scroll right
+            currentPosition += (itemWidth * scrollItems);
+            if (currentPosition >= maxScrollPosition) {
+                currentPosition = maxScrollPosition;
+            }
+        } else if (direction === -1) { // Scroll left
+            currentPosition -= (itemWidth * scrollItems);
+            if (currentPosition < 0) {
+                currentPosition = 0;
+            }
+        }
+
+        // Store the current position
+        carousel.setAttribute('data-position', currentPosition.toString());
+
+        // Apply the transform with smooth transition
+        carousel.style.transition = 'transform 0.4s ease-in-out';
+        carousel.style.transform = `translateX(-${currentPosition}px)`;
     }
-    
-    // Store the current position
-    carousel.setAttribute('data-position', currentPosition.toString());
-    
-    // Apply the transform with smooth transition
-    carousel.style.transition = 'transform 0.4s ease-in-out';
-    carousel.style.transform = `translateX(-${currentPosition}px)`;
-}
+});
+
