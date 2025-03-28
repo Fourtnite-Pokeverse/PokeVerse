@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -9,7 +8,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link href="homepagestyle.css" rel="stylesheet">
-    <link rel="icon" href="Logos/Gaming.png">
+     <link rel="icon" href="Logos/Gaming.png">
 
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -24,27 +23,7 @@
         <nav class="nav">
             <a class="nav-link" href="codeRedemption.html">Code Redemption</a>
             <a class="nav-link" href="#">Event Ticketing</a>
-            <div class="profile-dropdown">
-                <button class="profile-btn" onclick="toggleProfileMenu()">
-                    <i class="fas fa-user-circle"></i>
-                </button>
-                <div class="profile-menu" id="profileMenu">
-                    <div class="profile-header">
-                        <div class="profile-info">
-                            <span class="username">Username</span>
-                            <span class="player-id">Player ID: <span id="displayPlayerId"></span></span>
-                        </div>
-                    </div>
-                    <div class="profile-links">
-                        <a href="#" class="profile-link"><i class="fas fa-user"></i> Profile</a>
-                        <a href="UserCart.html" class="profile-link"><i class="fas fa-shopping-cart"></i> Cart</a>
-                        <a href="#" class="profile-link"><i class="fas fa-ticket-alt"></i> Code Redemption</a>
-                        <a href="#" class="profile-link"><i class="fas fa-calendar-alt"></i> Event Ticketing</a>
-                        <a href="homepage.html" class="profile-link"><i class="fas fa-sign-out-alt"></i> Sign Out</a>
-
-                    </div>
-                </div>
-            </div>
+            <a class="nav-link btn btn-primary btn-signup" href="signup.html">Sign Up</a>
         </nav>
     </header>
 
@@ -164,7 +143,7 @@
         <!--ITEM BOXES SECTION-->
         <section id="itemboxes" class="product-section bg-light">
             <div class="container">
-                <h2 class="text-center mb-5 bold">Item Boxes</h2>
+                <h2 class="text-center mb-5">Item Boxes</h2>
                 <div class="cards-container">
                     <div class="card-wrapper" onclick="openPopModal('pop-modal1')">
                         <div class="card-banner">Limited-Time Only</div>
@@ -346,74 +325,74 @@
 
 
 
-            <!--POKECOIN SECTION-->
+        <!--POKECOIN SECTION-->
         <section id="pokecoins" class="product-section">
-                <h2 class="text-center mb-5">PokéCoins</h2>
-                <section class="pokecoin-carousel-container">
-                    <button class="pokecoin-carousel-btn left">❮</button>
-                    <div class="pokecoin-carousel-wrapper">
-                        <div class="pokecoin-carousel">
-                            <div class="pokecoin-carousel-item">
-                                <img src="images/110coins.png" alt="110 PokéCoins">
-                                <p class="pokecoin-title">110 PokéCoins</p>
-                                <p class="pokecoin-price">₱29.00</p>
-                                <div class="pokecoin-bonus-info">100 + 10 Web Store Bonus = <br><strong>110 total PokéCoins</strong></div>
-                            </div>
-                            <div class="pokecoin-carousel-item">
-                                <img src="images/600coins.png" alt="600 PokéCoins">
-                                <p class="pokecoin-title">600 PokéCoins</p>
-                                <p class="pokecoin-price">₱149.00</p>
-                                <div class="pokecoin-bonus-info">550 + 50 Web Store Bonus = <br><strong>600 total PokéCoins</strong></div>
-                            </div>
-                            <div class="pokecoin-carousel-item">
-                                <img src="images/1300coins.png" alt="1,300 PokéCoins">
-                                <p class="pokecoin-title">1,300 PokéCoins</p>
-                                <p class="pokecoin-price">₱289.00</p>
-                                <div class="pokecoin-bonus-info">1,200 + 100 Web Store Bonus = <br><strong>1,300 total PokéCoins</strong></div>
-                            </div>
-                            <div class="pokecoin-carousel-item">
-                                <img src="images/2700coins.png" alt="2,700 PokéCoins">
-                                <p class="pokecoin-title">2,700 PokéCoins</p>
-                                <p class="pokecoin-price">₱589.00</p>
-                                <div class="pokecoin-bonus-info">2,500 + 200 Web Store Bonus = <br><strong>2,700 total PokéCoins</strong></div>
-                            </div>
-                            <div class="pokecoin-carousel-item">
-                                <img src="images/5600coins.png" alt="5,600 PokéCoins">
-                                <p class="pokecoin-title">5,600 PokéCoins</p>
-                                <p class="pokecoin-price">₱1,170.00</p>
-                                <div class="pokecoin-bonus-info">5,200 + 400 Web Store Bonus = <br><strong>5,600 total PokéCoins</strong></div>
-                            </div>
-                            <div class="pokecoin-carousel-item">
-                                <img src="images/15500coins.png" alt="15,500 PokéCoins">
-                                <p class="pokecoin-title">15,500 PokéCoins</p>
-                                <p class="pokecoin-price">₱2,950.00</p>
-                                <div class="pokecoin-bonus-info">14,500 + 1,000 Web Store Bonus = <br><strong>15,500 total PokéCoins</strong></div>
-                            </div>
-                            <div class="pokecoin-carousel-item">
-                                <img src="ExtraC.jpg" alt="18,800 PokéCoins">
-                                <p class="pokecoin-title">18,800 PokéCoins</p>
-                                <p class="pokecoin-price">₱3,270.00</p>
-                                <div class="pokecoin-bonus-info">15,000 + 3,300 Web Store Bonus = <br><strong>18,800 total PokéCoins</strong></div>
-                            </div>
-                            <div class="pokecoin-carousel-item">
-                                <img src="CoinExtra1.png" alt="20,000 PokéCoins">
-                                <p class="pokecoin-title">20,000 PokéCoins</p>
-                                <p class="pokecoin-price">₱3,500.00</p>
-                                <div class="pokecoin-bonus-info">16,000 + 4,000 Web Store Bonus = <br><strong>20,000 total PokéCoins</strong></div>
-                            </div>
-                        </div
-                    </div>
-                    <button class="pokecoin-carousel-btn right">❯</button>
-                </section>
+            <h2 class="text-center mb-5">PokéCoins</h2>
+            <section class="pokecoin-carousel-container">
+                <button class="pokecoin-carousel-btn left">❮</button>
+                <div class="pokecoin-carousel-wrapper">
+                    <div class="pokecoin-carousel">
+                        <div class="pokecoin-carousel-item">
+                            <img src="images/110coins.png" alt="110 PokéCoins">
+                            <p class="pokecoin-title">110 PokéCoins</p>
+                            <p class="pokecoin-price">₱29.00</p>
+                            <div class="pokecoin-bonus-info">100 + 10 Web Store Bonus = <br><strong>110 total PokéCoins</strong></div>
+                        </div>
+                        <div class="pokecoin-carousel-item">
+                            <img src="images/600coins.png" alt="600 PokéCoins">
+                            <p class="pokecoin-title">600 PokéCoins</p>
+                            <p class="pokecoin-price">₱149.00</p>
+                            <div class="pokecoin-bonus-info">550 + 50 Web Store Bonus = <br><strong>600 total PokéCoins</strong></div>
+                        </div>
+                        <div class="pokecoin-carousel-item">
+                            <img src="images/1300coins.png" alt="1,300 PokéCoins">
+                            <p class="pokecoin-title">1,300 PokéCoins</p>
+                            <p class="pokecoin-price">₱289.00</p>
+                            <div class="pokecoin-bonus-info">1,200 + 100 Web Store Bonus = <br><strong>1,300 total PokéCoins</strong></div>
+                        </div>
+                        <div class="pokecoin-carousel-item">
+                            <img src="images/2700coins.png" alt="2,700 PokéCoins">
+                            <p class="pokecoin-title">2,700 PokéCoins</p>
+                            <p class="pokecoin-price">₱589.00</p>
+                            <div class="pokecoin-bonus-info">2,500 + 200 Web Store Bonus = <br><strong>2,700 total PokéCoins</strong></div>
+                        </div>
+                        <div class="pokecoin-carousel-item">
+                            <img src="images/5600coins.png" alt="5,600 PokéCoins">
+                            <p class="pokecoin-title">5,600 PokéCoins</p>
+                            <p class="pokecoin-price">₱1,170.00</p>
+                            <div class="pokecoin-bonus-info">5,200 + 400 Web Store Bonus = <br><strong>5,600 total PokéCoins</strong></div>
+                        </div>
+                        <div class="pokecoin-carousel-item">
+                            <img src="images/15500coins.png" alt="15,500 PokéCoins">
+                            <p class="pokecoin-title">15,500 PokéCoins</p>
+                            <p class="pokecoin-price">₱2,950.00</p>
+                            <div class="pokecoin-bonus-info">14,500 + 1,000 Web Store Bonus = <br><strong>15,500 total PokéCoins</strong></div>
+                        </div>
+                        <div class="pokecoin-carousel-item">
+                            <img src="ExtraC.jpg" alt="18,800 PokéCoins">
+                            <p class="pokecoin-title">18,800 PokéCoins</p>
+                            <p class="pokecoin-price">₱3,270.00</p>
+                            <div class="pokecoin-bonus-info">15,000 + 3,300 Web Store Bonus = <br><strong>18,800 total PokéCoins</strong></div>
+                        </div>
+                        <div class="pokecoin-carousel-item">
+                            <img src="CoinExtra1.png" alt="20,000 PokéCoins">
+                            <p class="pokecoin-title">20,000 PokéCoins</p>
+                            <p class="pokecoin-price">₱3,500.00</p>
+                            <div class="pokecoin-bonus-info">16,000 + 4,000 Web Store Bonus = <br><strong>20,000 total PokéCoins</strong></div>
+                        </div>
+                    </div
+                </div>
+                <button class="pokecoin-carousel-btn right">❯</button>
+            </section>
 
-                <!-- Add PokéCoins Modal -->
-                <div class="pokecoin-modal">
-                    <div class="pokecoin-modal-content">
-                        <!-- Modal content will be dynamically inserted here -->
-                    </div>
+            <!-- Add PokéCoins Modal -->
+            <div class="pokecoin-modal">
+                <div class="pokecoin-modal-content">
+                    <!-- Modal content will be dynamically inserted here -->
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
 
 
@@ -448,13 +427,6 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="homepage.js"></script>
-
-    <script>
-        // Show alert when the page loads
-        window.onload = function() {
-            alert('Successfully logged in!');
-        };
-    </script>
 
     </div>
 </body>
