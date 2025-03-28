@@ -367,4 +367,95 @@ document.addEventListener('DOMContentLoaded', () => {
     if (displayPlayerId) {
         displayPlayerId.textContent = generatePlayerId();
     }
+
+    // Initialize PokéCoins carousel
+    const carousel = document.querySelector(".pokecoin-carousel");
+    const prevBtn = document.querySelector(".pokecoin-carousel-btn.left");
+    const nextBtn = document.querySelector(".pokecoin-carousel-btn.right");
+
+    if (carousel) {
+        carousel.style.transform = "translateX(0)";
+        carousel.setAttribute('data-position', '0');
+
+        // Add click event listeners to the buttons
+        prevBtn.addEventListener("click", () => scrollPokecoinCarousel(-1));
+        nextBtn.addEventListener("click", () => scrollPokecoinCarousel(1));
+    }
+
+    // PokéCoins Modal Functionality
+    const modal = document.querySelector(".pokecoin-modal");
+
+    // Add click event to each PokéCoin item
+    document.querySelectorAll(".pokecoin-carousel-item").forEach(item => {
+        item.addEventListener("click", function() {
+            const title = item.querySelector(".pokecoin-title").textContent;
+            const price = item.querySelector(".pokecoin-price").textContent;
+            const bonusInfo = item.querySelector(".pokecoin-bonus-info").innerHTML;
+            const image = item.querySelector("img").src;
+
+            // Update modal content
+            const modalContent = document.querySelector(".pokecoin-modal-content");
+            modalContent.innerHTML = `
+                <span class="pokecoin-close">&times;</span>
+                <img src="${image}" alt="${title}" style="width: 150px; margin-bottom: 15px;">
+                <h2 style="color: #333; margin-bottom: 10px;">${title}</h2>
+                <p style="color: #ff1493; font-size: 24px; font-weight: bold; margin: 15px 0;">${price}</p>
+                <div style="background: linear-gradient(90deg, #8a2be2, #ff1493); color: white; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                    ${bonusInfo}
+                </div>
+                <button class="pokecoin-buy-now" style="margin-top: 15px;">Buy Now</button>
+            `;
+
+            // Show modal
+            modal.classList.add("show");
+        });
+    });
+
+    // Close modal when clicking the close button
+    document.addEventListener("click", function(event) {
+        if (event.target.classList.contains("pokecoin-close")) {
+            modal.classList.remove("show");
+        }
+    });
+
+    // Close modal when clicking outside
+    window.addEventListener("click", function(event) {
+        if (event.target === modal) {
+            modal.classList.remove("show");
+        }
+    });
 });
+
+// Function to scroll the PokéCoins carousel
+function scrollPokecoinCarousel(direction) {
+    const carousel = document.querySelector(".pokecoin-carousel");
+    const carouselItems = document.querySelectorAll(".pokecoin-carousel-item");
+    const itemWidth = carouselItems[0].offsetWidth + 30; // Include the gap (30px)
+    const totalItems = carouselItems.length;
+    const itemsPerView = 3; 
+    const scrollItems = 3; 
+    
+    let currentPosition = parseInt(carousel.getAttribute('data-position') || '0');
+    
+    const maxScrollPosition = (totalItems - itemsPerView) * itemWidth;
+    
+    if (direction === 1) { // Scroll right
+        currentPosition += (itemWidth * scrollItems);
+        // Only stop if we've reached or exceeded the maximum scroll position
+        if (currentPosition >= maxScrollPosition) {
+            currentPosition = maxScrollPosition;
+        }
+    } else if (direction === -1) { // Scroll left
+        currentPosition -= (itemWidth * scrollItems);
+        if (currentPosition < 0) {
+            currentPosition = 0;
+        }
+    }
+    
+    // Store the current position
+    carousel.setAttribute('data-position', currentPosition.toString());
+    
+    // Apply the transform with smooth transition
+    carousel.style.transition = 'transform 0.4s ease-in-out';
+    carousel.style.transform = `translateX(-${currentPosition}px)`;
+}
