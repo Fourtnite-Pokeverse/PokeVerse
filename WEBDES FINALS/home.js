@@ -380,6 +380,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // PokéCoins Modal Functionality
+    // PokéCoins Modal Functionality
 const modal = document.querySelector(".pokecoin-modal");
 
 // Add click event to each PokéCoin item
@@ -393,13 +394,13 @@ document.querySelectorAll(".pokecoin-carousel-item").forEach(item => {
         // Define a mapping of product titles to their respective HTML files
         const pageMapping = {
             "110 PokéCoins": "DOneTencoins.html",
-            "600 PokéCoins": "DSixHun.html",
-            "1,300 PokéCoins": "DOneTricoins.html",
-            "2,700 PokéCoins": "DTuSev.html",
-            "5,600 PokéCoins": "DFiSx.html",
-            "15,500 PokéCoins": "DFifFive.html",
-            "18,800 PokéCoins": "DEitinEight.html",
-            "20,000 PokéCoins": "DTwentyK.html"
+            "600 PokéCoins": "600coins.html",
+            "1,300 PokéCoins": "1300coins.html",
+            "2,700 PokéCoins": "2700coins.html",
+            "5,600 PokéCoins": "5600coins.html",
+            "15,500 PokéCoins": "15500coins.html",
+            "18,800 PokéCoins": "18800coins.html",
+            "20,000 PokéCoins": "20000coins.html"
         };
 
         // Get the correct page URL based on the selected item
@@ -441,6 +442,8 @@ window.addEventListener("click", function(event) {
         modal.classList.remove("show");
     }
 });
+
+
 
 // Function to scroll the PokéCoins carousel
 function scrollPokecoinCarousel(direction) {
