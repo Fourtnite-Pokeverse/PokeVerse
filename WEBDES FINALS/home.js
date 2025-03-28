@@ -379,71 +379,49 @@ document.addEventListener('DOMContentLoaded', () => {
         nextBtn.addEventListener("click", () => scrollPokecoinCarousel(1));
     }
 
-    // PokéCoins Modal Functionality
-    // PokéCoins Modal Functionality
-const modal = document.querySelector(".pokecoin-modal");
+     // PokéCoins Modal Functionality
+    const modal = document.querySelector(".pokecoin-modal");
 
-// Add click event to each PokéCoin item
-document.querySelectorAll(".pokecoin-carousel-item").forEach(item => {
-    item.addEventListener("click", function() {
-        const title = item.querySelector(".pokecoin-title").textContent;
-        const price = item.querySelector(".pokecoin-price").textContent;
-        const bonusInfo = item.querySelector(".pokecoin-bonus-info").innerHTML;
-        const image = item.querySelector("img").src;
+    // Add click event to each PokéCoin item
+    document.querySelectorAll(".pokecoin-carousel-item").forEach(item => {
+        item.addEventListener("click", function() {
+            const title = item.querySelector(".pokecoin-title").textContent;
+            const price = item.querySelector(".pokecoin-price").textContent;
+            const bonusInfo = item.querySelector(".pokecoin-bonus-info").innerHTML;
+            const image = item.querySelector("img").src;
 
-        // Define a mapping of product titles to their respective HTML files
-        const pageMapping = {
-            "110 PokéCoins": "DOneTencoins.html",
-            "600 PokéCoins": "600coins.html",
-            "1,300 PokéCoins": "1300coins.html",
-            "2,700 PokéCoins": "2700coins.html",
-            "5,600 PokéCoins": "5600coins.html",
-            "15,500 PokéCoins": "15500coins.html",
-            "18,800 PokéCoins": "18800coins.html",
-            "20,000 PokéCoins": "20000coins.html"
-        };
+            // Update modal content
+            const modalContent = document.querySelector(".pokecoin-modal-content");
+            modalContent.innerHTML = `
+                <span class="pokecoin-close">&times;</span>
+                <img src="${image}" alt="${title}" style="width: 150px; margin-bottom: 15px;">
+                <h2 style="color: #333; margin-bottom: 10px;">${title}</h2>
+                <p style="color: #ff1493; font-size: 24px; font-weight: bold; margin: 15px 0;">${price}</p>
+                <div style="background: linear-gradient(90deg, #8a2be2, #ff1493); color: white; padding: 15px; border-radius: 10px; margin: 15px 0;">
+                    ${bonusInfo}
+                </div>
+                <button class="pokecoin-buy-now" style="margin-top: 15px;">Buy Now</button>
+            `;
 
-        // Get the correct page URL based on the selected item
-        const productPage = pageMapping[title] || "#"; // Fallback to "#" if not found
-
-        // Update modal content
-        const modalContent = document.querySelector(".pokecoin-modal-content");
-        modalContent.innerHTML = `
-            <span class="pokecoin-close">&times;</span>
-            <img src="${image}" alt="${title}" style="width: 150px; margin-bottom: 15px;">
-            <h2 style="color: #333; margin-bottom: 10px;">${title}</h2>
-            <p style="color: #ff1493; font-size: 24px; font-weight: bold; margin: 15px 0;">${price}</p>
-            <div style="background: linear-gradient(90deg, #8a2be2, #ff1493); color: white; padding: 15px; border-radius: 10px; margin: 15px 0;">
-                ${bonusInfo}
-            </div>
-            <button class="pokecoin-buy-now" style="margin-top: 15px;" data-url="${productPage}">Buy Now</button>
-        `;
-
-        // Show modal
-        modal.classList.add("show");
-
-        // Attach event listener to "Buy Now" button after modal content is updated
-        document.querySelector(".pokecoin-buy-now").addEventListener("click", function() {
-            window.location.href = this.getAttribute("data-url");
+            // Show modal
+            modal.classList.add("show");
         });
     });
+
+    // Close modal when clicking the close button
+    document.addEventListener("click", function(event) {
+        if (event.target.classList.contains("pokecoin-close")) {
+            modal.classList.remove("show");
+        }
+    });
+
+    // Close modal when clicking outside
+    window.addEventListener("click", function(event) {
+        if (event.target === modal) {
+            modal.classList.remove("show");
+        }
+    });
 });
-
-// Close modal when clicking the close button
-document.addEventListener("click", function(event) {
-    if (event.target.classList.contains("pokecoin-close")) {
-        modal.classList.remove("show");
-    }
-});
-
-// Close modal when clicking outside
-window.addEventListener("click", function(event) {
-    if (event.target === modal) {
-        modal.classList.remove("show");
-    }
-});
-
-
 
 // Function to scroll the PokéCoins carousel
 function scrollPokecoinCarousel(direction) {
