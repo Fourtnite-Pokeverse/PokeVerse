@@ -1,0 +1,166 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+/* Store Header */
+.store-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #8a2be2, #ff1493);
+}
+
+/* Left Side: Logo + Web Store Text */
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Space between logo and text */
+}
+
+/* Store Logo */
+.header-logo {
+    width: 65px;
+    height: 65px;
+}
+
+/* Web Store Title */
+.store-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+}
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    gap: 30px; /* Increased gap between links */
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Right Side: User Avatar */
+.header-right {
+    margin-right: 30px; /* Move avatar slightly right */
+}
+
+.header-avatar {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+}
+
+/* Back to Store Link */
+.back-link {
+    display: block;
+    margin: 20px;
+    color: #007bff;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+/* Profile Section */
+.profile-section {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.profile-card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 70%;
+}
+
+/* Enlarged Profile Picture */
+.profile-pic {
+    width: 120px;  /* Enlarged */
+    height: 120px; /* Enlarged */
+    border-radius: 50%;
+    margin-right: 100px;
+    border: 3px solid #000; /* Optional: Add a border */
+}
+
+/* Profile Info Layout */
+.profile-info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 30px;
+}
+
+/* Individual Info Styling */
+.profile-info div {
+    text-align: center;
+    flex: 1;
+}
+
+/* Text Adjustments */
+.profile-info p {
+    margin: 3px 0;
+    font-size: 16px;
+}
+
+.profile-info strong {
+    display: block;
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Order History Section */
+.order-history {
+    width: 90%;
+    margin: auto;
+}
+
+h2 {
+    color: #007bff;
+}
+
+.order-history-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.order-history-table th, .order-history-table td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+/* Make header row stand out */
+.order-history-table thead {
+    background-color: #d6e4ff;
+}
+
+/* Adjust item column */
+.item-cell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Image size for items */
+.item-cell img {
+    width: 120px;
+    height: 120px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
