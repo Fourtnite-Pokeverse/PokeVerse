@@ -1,0 +1,151 @@
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url('images/POKEBACKG.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+/* Header */
+.store-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 50px;
+    background: linear-gradient(90deg, #a548a6, #ff70b5);
+    color: white;
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Back Button */
+.back-link {
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.back-link::before {
+    content: "◀";
+    font-size: 28px;
+    margin-right: 10px;
+}
+
+/* Checkout Popup */
+.checkout-popup {
+    background: white;
+    border: 6px solid #7b1fa2;
+    border-radius: 20px;
+    box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.4);
+    max-width: 450px;
+    width: 90%;
+    padding: 25px;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Product Details */
+.product-img {
+    width: 120px;
+    display: block;
+    margin: 0 auto 15px;
+}
+
+.product-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4a148c;
+}
+
+.product-price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2e7d32;
+}
+
+/* Payment Methods */
+.payment-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.payment-option {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 3px solid transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.payment-option img {
+    width: 100%;
+}
+
+.payment-option.active {
+    border: 3px solid #6a1b9a;
+    transform: scale(1.1);
+}
+
+/* Billing Section */
+input[type="email"] {
+    width: 85%;
+    padding: 10px;
+    border: 2px solid #7b1fa2;
+    border-radius: 8px;
+}
+
+/* Continue Button */
+.continue-btn {
+    width: 90%;
+    padding: 15px;
+    background: #6a1b9a;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.continue-btn:hover {
+    background: #4a148c;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .checkout-popup {
+        width: 95%;
+    }
+}
