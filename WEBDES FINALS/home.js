@@ -389,6 +389,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const price = item.querySelector(".pokecoin-price").textContent;
             const bonusInfo = item.querySelector(".pokecoin-bonus-info").innerHTML;
             const image = item.querySelector("img").src;
+            const link = item.getAttribute("data-link");
 
             // Update modal content
             const modalContent = document.querySelector(".pokecoin-modal-content");
@@ -400,7 +401,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div style="background: linear-gradient(90deg, #8a2be2, #ff1493); color: white; padding: 15px; border-radius: 10px; margin: 15px 0;">
                     ${bonusInfo}
                 </div>
-                <button class="pokecoin-buy-now" style="margin-top: 15px;">Buy Now</button>
+                <button class="pokecoin-buy-now" style="margin-top: 15px;" onclick="location.href='${link}'">Buy Now</button>
             `;
 
             // Show modal
