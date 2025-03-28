@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cart - Web Store</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dedicated.css">
+</head>
+<body>
+    <main class="cart-container">
+        <a href="homepage.html" class="back-link">&larr; Back to Store</a>
+        
+        <div class="checkout-popup">
+            <button class="close-btn" id="close-popup">&times;</button>
+            <div class="popup-header">
+                <img src="images/SpecialC.jpg" alt="15,500 PokéCoins" class="product-img">
+                <h2 class="product-title">Special PokéCoin Bundle</h2>
+                <p class="product-price">&#8369;249.00</p>
+            </div>
+            
+            <!-- Payment Options -->
+            <div id="payment-methods" class="payment-icons">
+                <img src="images/Paypal.png" alt="PayPal" class="payment-option active" data-method="paypal">
+                <img src="images/Visa.png" alt="Visa" class="payment-option" data-method="visa">
+                <img src="images/Apple Pay.png" alt="Apple Pay" class="payment-option" data-method="applepay">
+            </div>
+            
+            <!-- Payment Info -->
+            <div id="payment-info">
+                <h3>Payment via PayPal</h3>
+                <p>You will be redirected to PayPal to complete the payment.</p>
+            </div>
+            
+            <!-- Billing Information -->
+            <label for="email">Billing Information</label>
+            <input type="email" id="email" placeholder="Enter your email for receipt">
+            
+            <div class="summary">
+                <p>Subtotal: <strong>&#8369;249.00</strong></p>
+                <p>Total: <strong>&#8369;249.00</strong></p>
+            </div>
+            
+            <button class="continue-btn">Continue</button>
+            
+            <p class="terms">
+                By proceeding, you confirm you're an adult and agree to the
+                <a href="#">Terms & Conditions</a>.
+            </p>
+        </div>
+    </main>
+
+    <script src="dedicate.js"></script>
+</body>
+</html>
