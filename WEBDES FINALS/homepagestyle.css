@@ -28,6 +28,8 @@ body {
 .product-section {
     scroll-margin-top: 80px;
     /* This creates space when scrolling to section */
+    padding: 20px 0;
+    min-height: auto;
 }
 
 .header .nav-link {
@@ -273,8 +275,41 @@ body {
 
 /* Content Sections */
 .product-section {
-    padding: 60px 0;
-    min-height: 100vh;
+    padding: 20px 0;
+    min-height: auto;
+}
+
+/* Specific section adjustments */
+#pokecoins.product-section {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+#dailybundles.product-section {
+    margin-top: 0;
+    padding-top: 20px;
+}
+
+/* Section title spacing */
+.text-center.mb-5 {
+    margin-bottom: 20px !important;
+}
+
+/* Ensure proper spacing between sections */
+.bg-light {
+    padding: 20px 0;
+    margin: 0;
+}
+
+/* Remove any extra margins from containers */
+.container {
+    margin-bottom: 0;
+}
+
+/* Adjust spacing for the last section */
+.product-section:last-child {
+    padding-bottom: 20px;
+    margin-bottom: 0;
 }
 
 /* Product Modal Styles */
@@ -515,7 +550,8 @@ body {
 .cards-container {
     display: flex;
     gap: 20px;
-    
+    margin-top: 50px;
+    min-height: 300px;
 }
 
 .card-wrapper {
@@ -899,4 +935,272 @@ body {
     margin-right: 10px;
     width: 20px;
     text-align: center;
+}
+
+.back-button {
+    position: absolute;
+    top: 80px; /* Below the navbar */
+    left: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.back-button i {
+    margin-right: 8px;
+}
+
+.back-button:hover {
+    background: rgba(57, 181, 74, 0.9);
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(57, 181, 74, 0.9);
+    color: white;
+    text-decoration: none;
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+/* Store Header */
+.pokecoin-store-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #8a2be2, #ff1493);
+}
+
+/* Left Side: Logo + Web Store Title */
+.pokecoin-header-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.pokecoin-header-logo {
+    width: 65px;
+    height: 65px;
+}
+
+.pokecoin-store-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+/* Navigation Links */
+.pokecoin-nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.pokecoin-nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Center "PokéCoins" Title */
+.pokecoin-section-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Center Carousel */
+.pokecoin-carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px 80px;
+    overflow: visible;
+    min-height: 600px;
+}
+
+.pokecoin-carousel-wrapper {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 20px 0;
+    min-height: 550px;
+}
+
+.pokecoin-carousel {
+    display: flex;
+    gap: 30px;
+    transition: transform 0.4s ease-in-out;
+    width: fit-content;
+    margin: 0 auto;
+    padding-bottom: 30px;
+}
+
+/* PokéCoins Cards */
+.pokecoin-carousel-item {
+    flex: 0 0 calc(20% - 24px);
+    min-width: 220px;
+    text-align: center;
+    background: white;
+    padding: 25px 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+    margin-right: 0;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #e0e0e0;
+}
+
+.pokecoin-carousel-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+    border-color: #ff1493;
+}
+
+.pokecoin-carousel-item img {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+    margin: 0 auto 30px;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+}
+
+.pokecoin-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 20px 0;
+    color: #333;
+}
+
+.pokecoin-price {
+    color: #ff1493;
+    font-weight: bold;
+    font-size: 1.8rem;
+    margin: 15px 0;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+.pokecoin-bonus-info {
+    background: linear-gradient(90deg, #8a2be2, #ff1493);
+    color: white;
+    font-weight: bold;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Carousel Buttons */
+.pokecoin-carousel-btn {
+    background: #ff1493;
+    color: white;
+    border: none;
+    font-size: 28px;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.pokecoin-carousel-btn.left {
+    left: 20px; /* Increased distance from edge */
+}
+
+.pokecoin-carousel-btn.right {
+    right: 20px; /* Increased distance from edge */
+}
+
+.pokecoin-carousel-btn:hover {
+    background: #ff69b4;
+    transform: translateY(-50%) scale(1.1);
+}
+
+/* Modal Styles */
+.pokecoin-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    align-items: center;
+    justify-content: center;
+}
+
+.pokecoin-modal.show {
+    display: flex;
+}
+
+.pokecoin-modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 350px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.pokecoin-modal-content h2 {
+    font-size: 24px;
+}
+
+.pokecoin-modal-content p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.pokecoin-buy-now {
+    background: #ff1493;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.pokecoin-buy-now:hover {
+    background: #ff69b4;
+}
+
+.pokecoin-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
 }
