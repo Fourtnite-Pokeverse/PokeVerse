@@ -218,7 +218,7 @@ $(document).ready(function() {
                     </ul>
                 </div>
                 <div class="text-center mt-4">
-                    <button class="btn btn-primary px-4 py-2 font-weight-bold">Buy PokéCoins</button>
+                    <button class="btn btn-primary px-4 py-2 font-weight-bold" onclick="window.location.href='DSpecialPokéCoinBundle.html';">Buy PokéCoins</button>
                 </div>
             `;
         }
@@ -245,7 +245,7 @@ $(document).ready(function() {
                     </ul>
                 </div>
                 <div class="text-center mt-4">
-                    <button class="btn btn-primary px-4 py-2 font-weight-bold">Get Item Box</button>
+                    <button class="btn btn-primary px-4 py-2 font-weight-bold" onclick="window.location.href='DExclusiveItemBoxes.html';">Get Item Box</button>
                 </div>
             `;
         }
@@ -270,7 +270,7 @@ $(document).ready(function() {
                     </ul>
                 </div>
                 <div class="text-center mt-4">
-                    <button class="btn btn-primary px-4 py-2 font-weight-bold">Get Daily Bundle</button>
+                    <button class="btn btn-primary px-4 py-2 font-weight-bold" onclick="window.location.href='DDailyBundles.html';">Get Daily Bundle</button>
                 </div>
             `;
         }
@@ -312,7 +312,7 @@ $(document).ready(function() {
                 <a href="#" class="text-primary">View event details</a>
             </div>
             <div class="text-center mt-4">
-                <button class="btn btn-primary px-4 py-2 font-weight-bold">Purchase Ticket</button>
+                <button class="btn btn-primary px-4 py-2 font-weight-bold" onclick="window.location.href='DGlobalTicket.html';">Purchase Ticket</button>
             </div>
         `;
 
