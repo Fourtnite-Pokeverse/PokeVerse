@@ -5,20 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Store - Order History</title>
     <link rel="stylesheet" href="Prof.css">
+    <link rel="stylesheet" href="homepagestyle.css">
 </head>
 <body>
-    <header class="store-header">
-        <div class="header-left">
-            <img src="images/LOGO.png" alt="Store Logo" class="header-logo">
-            <h1 class="store-title">Web Store</h1>
+    <header class="header d-flex justify-content-between align-items-center">
+        <div class="d-flex align-items-center">
+            <img src="Logos/Gaming.png" alt="Logo" class="img-fluid" style="height: 70px; width: 70px;">
+            <span class="text-white h3 ml-2">Web Store</span>
         </div>
-        <nav class="nav-links">
-            <a href="codeRedemption.html">Code Redemption</a>
-            <a href="#">Event Ticketing</a>
+        <nav class="nav">
+            <a class="nav-link" href="codeRedemption.html">Code Redemption</a>
+            <a class="nav-link" href="#">Event Ticketing</a>
+            <div class="profile-dropdown">
+                <button class="profile-btn" onclick="toggleProfileMenu()">
+                    <i class="fas fa-user-circle"></i>
+                </button>
+                <div class="profile-menu" id="profileMenu">
+                    <div class="profile-header">
+                        <div class="profile-info">
+                            <span class="username">Username</span>
+                            <span class="player-id">Player ID: <span id="displayPlayerId"></span></span>
+                        </div>
+                    </div>
+                    <div class="profile-links">
+                        <a href="Profile.html" class="profile-link"><i class="fas fa-user"></i> Profile</a>
+                        <a href="UserCart.html" class="profile-link"><i class="fas fa-shopping-cart"></i> Cart</a>
+                        <a href="#" class="profile-link"><i class="fas fa-ticket-alt"></i> Code Redemption</a>
+                        <a href="#" class="profile-link"><i class="fas fa-calendar-alt"></i> Event Ticketing</a>
+                        <a href="homepage.html" class="profile-link"><i class="fas fa-sign-out-alt"></i> Sign Out</a>
+
+                    </div>
+                </div>
+            </div>
         </nav>
-        <div class="header-right">
-            <img src="images/USERAVATAR.png" alt="User Avatar" class="header-avatar">
-        </div>
     </header>
     
 
