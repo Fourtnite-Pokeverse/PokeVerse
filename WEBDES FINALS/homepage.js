@@ -193,7 +193,7 @@ $(document).ready(function() {
                     <a href="#" class="text-primary">View event details</a>
                 </div>
                 <div class="text-center mt-4">
-                    <button class="btn btn-primary px-4 py-2 font-weight-bold">Purchase Ticket</button>
+                    <button class="btn btn-primary px-4 py-2 font-weight-bold" onclick="window.location.href='DGlobalTicket.html';">Purchase Ticket</button>
                 </div>
             `;
         }
