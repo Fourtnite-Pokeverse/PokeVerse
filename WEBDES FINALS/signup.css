@@ -55,10 +55,12 @@ form {
 form.sign-up-form {
   opacity: 0;
   z-index: 1;
+  transform: translateX(100%);
 }
 
 form.sign-in-form {
   z-index: 2;
+  transform: translateX(0);
 }
 
 .title {
