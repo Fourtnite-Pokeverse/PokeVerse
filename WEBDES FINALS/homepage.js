@@ -277,56 +277,53 @@ $(document).ready(function() {
 
         $('#productModal .modal-body').html(modalContent);
         $('#productModal').modal('show');
+    });
 
+    // Featured product card click handler
+    $('.featured-product-card').click(function(e) {
+        if ($(e.target).closest('.purchase-btn').length) {
+            return;
+        }
 
+        const popupImage = $(this).data('popup-image');
+        const title = $(this).find('h3').text();
 
-        //onclick for
-        $(document).on('click', '.featured-product-card', function (e) {
-            // Don't trigger if clicking on the purchase button
-            if ($(e.target).closest('.purchase-btn').length) {
-                return;
-            }
+        $('#productModal .modal-title').text(title);
 
-            const popupImage = $(this).data('popup-image');
-            const title = $(this).find('h3').text();
+        const modalContent = `
+            <div class="product-image-container mb-4">
+                <img src="${popupImage}" class="img-fluid rounded" alt="${title}">
+                <div class="badge-overlay">FEATURED</div>
+            </div>
+            <p class="text-muted mb-3">Can only be purchased 1 time.</p>
+            <div class="price-container mb-4">
+                <span class="original-price">P450.00</span>
+                <span class="discounted-price">P373.15</span>
+            </div>
+            <hr class="my-4">
+            <div class="features mb-4">
+                <h6 class="text-uppercase font-weight-bold text-muted mb-3">FEATURES</h6>
+                <ul class="pl-3 mb-3">
+                    <li class="mb-2"><strong>x1 Eggs-pedition Access: February</strong></li>
+                    <li class="mb-2"><strong>x5 Max Revive</strong></li>
+                    <li class="mb-2"><strong>x5 Rare Candy</strong></li>
+                    <li class="mb-2"><strong>x3 Premium Battle Pass</strong></li>
+                </ul>
+                <a href="#" class="text-primary">View event details</a>
+            </div>
+            <div class="text-center mt-4">
+                <button class="btn btn-primary px-4 py-2 font-weight-bold">Purchase Ticket</button>
+            </div>
+        `;
 
-            $('#productModal .modal-title').text(title);
+        $('#productModal .modal-body').html(modalContent);
+        $('#productModal').modal('show');
+    });
 
-            const modalContent = `
-        <div class="product-image-container mb-4">
-            <img src="${popupImage}" class="img-fluid rounded" alt="${title}">
-            <div class="badge-overlay">FEATURED</div>
-        </div>
-        <p class="text-muted mb-3">Can only be purchased 1 time.</p>
-        <div class="price-container mb-4">
-            <span class="original-price">P450.00</span>
-            <span class="discounted-price">P373.15</span>
-        </div>
-        <hr class="my-4">
-        <div class="features mb-4">
-            <h6 class="text-uppercase font-weight-bold text-muted mb-3">FEATURES</h6>
-            <ul class="pl-3 mb-3">
-                <li class="mb-2"><strong>x1 Eggs-pedition Access: February</strong></li>
-                <li class="mb-2"><strong>x5 Max Revive</strong></li>
-                <li class="mb-2"><strong>x5 Rare Candy</strong></li>
-                <li class="mb-2"><strong>x3 Premium Battle Pass</strong></li>
-            </ul>
-            <a href="#" class="text-primary">View event details</a>
-        </div>
-        <div class="text-center mt-4">
-            <button class="btn btn-primary px-4 py-2 font-weight-bold">Purchase Ticket</button>
-        </div>
-    `;
-
-            $('#productModal .modal-body').html(modalContent);
-            $('#productModal').modal('show');
-        });
-
-        // Keep the purchase button handler
-        $('.purchase-btn').on('click', function (e) {
-            e.stopPropagation();
-            $(this).closest('.featured-product-card').trigger('click');
-        });
+    // Purchase button handler
+    $('.purchase-btn').click(function(e) {
+        e.stopPropagation();
+        $(this).closest('.featured-product-card').trigger('click');
     });
 });
 
