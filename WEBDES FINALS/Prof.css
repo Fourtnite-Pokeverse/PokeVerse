@@ -51,18 +51,18 @@ body {
 }
 
 /* Individual Info Styling */
-.profilepage-info div {
+.profilepage-infos div {
     text-align: center;
     flex: 1;
 }
 
 /* Text Adjustments */
-.profilepage-info p {
+.profilepage-infos p {
     margin: 3px 0;
     font-size: 16px;
 }
 
-.profilepage-info strong {
+.profilepage-infos strong {
     display: block;
     font-weight: bold;
     color: #007bff;
