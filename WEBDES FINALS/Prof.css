@@ -51,7 +51,7 @@ body {
 }
 
 /* Individual Info Styling */
-.profilepage-infos div {
+.profilepage-infos {
     text-align: center;
     flex: 1;
 }
