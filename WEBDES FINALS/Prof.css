@@ -70,13 +70,13 @@ body {
 }
 
 /* Profile Section */
-.profile-section {
+.profilepage-section {
     display: flex;
     justify-content: center;
     margin: 20px 0;
 }
 
-.profile-card {
+.profilepage-card {
     background: white;
     padding: 20px;
     border-radius: 10px;
@@ -87,7 +87,7 @@ body {
 }
 
 /* Enlarged Profile Picture */
-.profile-pic {
+.profilepage-pic {
     width: 120px;  /* Enlarged */
     height: 120px; /* Enlarged */
     border-radius: 50%;
@@ -96,7 +96,7 @@ body {
 }
 
 /* Profile Info Layout */
-.profile-info {
+.profilepage-info {
     display: flex;
     justify-content: space-between;
     width: 100%;
