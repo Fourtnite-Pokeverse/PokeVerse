@@ -6,59 +6,6 @@ body {
     background-color: #f8f9fa;
 }
 
-/* Store Header */
-.store-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    background: linear-gradient(90deg, #8a2be2, #ff1493);
-}
-
-/* Left Side: Logo + Web Store Text */
-.header-left {
-    display: flex;
-    align-items: center;
-    gap: 15px; /* Space between logo and text */
-}
-
-/* Store Logo */
-.header-logo {
-    width: 65px;
-    height: 65px;
-}
-
-/* Web Store Title */
-.store-title {
-    font-size: 24px;
-    font-weight: bold;
-    color: white;
-    margin: 0;
-}
-
-/* Navigation Links */
-.nav-links {
-    display: flex;
-    gap: 30px; /* Increased gap between links */
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
-}
-
-/* Right Side: User Avatar */
-.header-right {
-    margin-right: 30px; /* Move avatar slightly right */
-}
-
-.header-avatar {
-    width: 65px;
-    height: 65px;
-    border-radius: 50%;
-}
 
 /* Back to Store Link */
 .back-link {
