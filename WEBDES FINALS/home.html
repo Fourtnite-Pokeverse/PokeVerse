@@ -18,27 +18,29 @@
 <body>
     <header class="header d-flex justify-content-between align-items-center">
         <div class="d-flex align-items-center">
-            <img src="Logos/Gaming.png" alt="Logo" class="img-fluid" style="height: 70px; width: 70px;">
-            <span class="text-white h3 ml-2">Web Store</span>
+            <a href="home.html" class="d-flex align-items-center text-decoration-none">
+                <img src="Logos/Gaming.png" alt="Logo" class="img-fluid" style="height: 70px; width: 70px;">
+                <span class="text-white h3 ml-2">Web Store</span>
+            </a>
         </div>
         <nav class="nav">
             <a class="nav-link" href="codeRedemption.html">Code Redemption</a>
             <a class="nav-link" href="#">Event Ticketing</a>
             <div class="profile-dropdown">
                 <button class="profile-btn" onclick="toggleProfileMenu()">
-                    <i class="fas fa-user-circle"></i>
+                    <img src="Icons/pikachuprofile.jpg" alt="Profile" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
                 </button>
                 <div class="profile-menu" id="profileMenu">
                     <div class="profile-header">
                         <div class="profile-info">
-                            <span class="username">Username</span>
+                            <span class="username">Trainer 02</span>
                             <span class="player-id">Player ID: <span id="displayPlayerId"></span></span>
                         </div>
                     </div>
                     <div class="profile-links">
                         <a href="Profile.html" class="profile-link"><i class="fas fa-user"></i> Profile</a>
                         <a href="UserCart.html" class="profile-link"><i class="fas fa-shopping-cart"></i> Cart</a>
-                        <a href="#" class="profile-link"><i class="fas fa-ticket-alt"></i> Code Redemption</a>
+                        <a href="codeRedemption.html" class="profile-link"><i class="fas fa-ticket-alt"></i> Code Redemption</a>
                         <a href="#" class="profile-link"><i class="fas fa-calendar-alt"></i> Event Ticketing</a>
                         <a href="homepage.html" class="profile-link"><i class="fas fa-sign-out-alt"></i> Sign Out</a>
 
@@ -68,7 +70,7 @@
                         <div class="title">
                             <h1>Pokemon GO Fest 2025: Global Ticket</h1>
                         </div>
-                        <a href="DGlobalTicket.html" class="cta-btn">GET TICKET</a>
+                        <button class="cta-btn">GET TICKET</button>
                     </div>
 
                     <!-- Item 2 -->
@@ -78,7 +80,7 @@
                         <div class="title">
                             <h1>Special PokéCoin Bundle</h1>
                         </div>
-                        <a href="DSpecialPokéCoinBundle.html" class="cta-btn">BUY NOW</a>
+                        <button class="cta-btn">BUY NOW</button>
                     </div>
 
                     <!-- Item 3 -->
@@ -88,7 +90,7 @@
                         <div class="title">
                             <h1>Exclusive Item Boxes</h1>
                         </div>
-                        <a href="DExclusiveItemBoxes.html" class="cta-btn">VIEW ITEMS</a>
+                        <button class="cta-btn">VIEW ITEMS</button>
                     </div>
 
                     <!-- Item 4 -->
@@ -104,7 +106,7 @@
                         <div class="title">
                             <h1>Daily Bundles</h1>
                         </div>
-                        <a href="DDailyBundles" class="cta-btn">VIEW ITEMS</a>
+                        <button class="cta-btn">VIEW ITEMS</button>
                     </div>
                 </div>
 
@@ -146,7 +148,7 @@
                                         <p class="product-note">Can only be purchased 1 time.</p>
                                         <span class="original-price">P450.00</span>
                                         <span class="discounted-price">P373.15</span>
-                                        <a href="DGlobalTicket.html" class="btn btn-primary purchase-btn">Purchase</a>
+                                        <button class="btn btn-primary purchase-btn">Purchase</button>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
@@ -179,7 +181,7 @@
                             </div>
                             <h2 class="card-title">Deep Depths Ultra Ticket Box</h2>
                             <h4 class="card-subtitle">Can Only be Purchased 1 Time</h4>
-                            <a href="DDeepDepthsUltraTicketBox.html" class="price-btn">₱59.00</a>
+                            <button class="price-btn">₱59.00</button>
                         </div>
                         <div class="timer"><img src="https://png.pngtree.com/png-vector/20220608/ourmid/pngtree-red-clock-icon-on-white-background-png-image_4887940.png" alt="Clock"> 14 Hours Left</div>
                     </div>
@@ -197,7 +199,7 @@
                             </div>
                             <h2 class="card-title">Go Rocket Box</h2>
                             <h4 class="card-subtitle">Can Only be Purchased 1 Time</h4>
-                            <a href="DGORocketBox.html" class="price-btn">₱289.00</a>
+                            <button class="price-btn">₱289.00</button>
                         </div>
                     </div>
                     <div class="card-wrapper" onclick="openPopModal('pop-modal3')">
@@ -213,7 +215,7 @@
                             </div>
                             <h2 class="card-title">Ultra Raid Box</h2>
                             <h4 class="card-subtitle">Can Only be Purchased 1 Time</h4>
-                            <a href="DUltraRaidBox.html" class="price-btn">₱149.00</a>
+                            <button class="price-btn">₱149.00</button>
                         </div>
                     </div>
                     <div class="card-wrapper" onclick="openPopModal('pop-modal4')">
@@ -229,7 +231,7 @@
                             </div>
                             <h2 class="card-title">Might and Mastery Box</h2>
                             <h4 class="card-subtitle">Can Only be Purchased 1 Time</h4>
-                            <a href="DMightandMasteryBox.html" class="price-btn">₱149.00</a>
+                            <button class="price-btn">₱149.00</button>
                         </div>
                     </div>
             
@@ -256,7 +258,7 @@
                                 <span class="pop-item-count">1x</span><span class="pop-item-details">Remote Raid Pass</span>
                             </div>
                         </div>
-                        <a href="DDeepDepthsUltraTicketBox.html" class="pop-price-btn">₱59.00</a> <span class="pop-purchase-info">CAN ONLY BE PURCHASED 1 TIME</span>
+                        <button class="pop-price-btn">₱59.00</button> <span class="pop-purchase-info">CAN ONLY BE PURCHASED 1 TIME</span>
                     </div>
                 </div>
                  <!-- Modal2 -->
@@ -286,7 +288,7 @@
                                 <span class="pop-item-count">5x</span><span class="pop-item-details">Max Revive</span>
                             </div>
                         </div>
-                        <a href="DGORocketBox.html" class="pop-price-btn">₱289.00</a> <span class="pop-purchase-info">CAN ONLY BE PURCHASED 1 TIME</span>
+                        <button class="pop-price-btn">₱289.00</button> <span class="pop-purchase-info">CAN ONLY BE PURCHASED 1 TIME</span>
                     </div>
                 </div>
                  <!-- Modal3 -->
@@ -312,7 +314,7 @@
                                 <span class="pop-item-count">4x</span><span class="pop-item-details">Remote Raid Pass</span>
                             </div>
                         </div>
-                        <a href="DUltraRaidBox.html" class="pop-price-btn">₱149.00</a> <span class="pop-purchase-info">CAN ONLY BE PURCHASED 1 TIME</span>
+                        <button class="pop-price-btn">₱149.00</button> <span class="pop-purchase-info">CAN ONLY BE PURCHASED 1 TIME</span>
                     </div>
                 </div>
                  <!-- Modal4 -->
@@ -338,7 +340,7 @@
                                 <span class="pop-item-count">4x</span><span class="pop-item-details">Remote Raid Pass</span>
                             </div>
                         </div>
-                        <a href="DMightandMasteryBox.html" class="pop-price-btn">₱289.00</a> <span class="pop-purchase-info">CAN ONLY BE PURCHASED 1 TIME</span>
+                        <button class="pop-price-btn">₱289.00</button> <span class="pop-purchase-info">CAN ONLY BE PURCHASED 1 TIME</span>
                     </div>
                 </div>
             </div>
@@ -353,50 +355,50 @@
                 <button class="pokecoin-carousel-btn left">❮</button>
                 <div class="pokecoin-carousel-wrapper">
                     <div class="pokecoin-carousel">
-                        <div class="pokecoin-carousel-item" data-link="DOneTencoins.html">
+                        <div class="pokecoin-carousel-item">
                             <img src="images/110coins.png" alt="110 PokéCoins">
                             <p class="pokecoin-title">110 PokéCoins</p>
                             <p class="pokecoin-price">₱29.00</p>
                             <div class="pokecoin-bonus-info">100 + 10 Web Store Bonus = <br><strong>110 total PokéCoins</strong></div>
                         </div>
-                        <div class="pokecoin-carousel-item" data-link="DSixHun.html">
+                        <div class="pokecoin-carousel-item">
                             <img src="images/600coins.png" alt="600 PokéCoins">
                             <p class="pokecoin-title">600 PokéCoins</p>
                             <p class="pokecoin-price">₱149.00</p>
                             <div class="pokecoin-bonus-info">550 + 50 Web Store Bonus = <br><strong>600 total PokéCoins</strong></div>
                         </div>
-                        <div class="pokecoin-carousel-item" data-link="DOneTricoins.html">
+                        <div class="pokecoin-carousel-item">
                             <img src="images/1300coins.png" alt="1,300 PokéCoins">
                             <p class="pokecoin-title">1,300 PokéCoins</p>
                             <p class="pokecoin-price">₱289.00</p>
                             <div class="pokecoin-bonus-info">1,200 + 100 Web Store Bonus = <br><strong>1,300 total PokéCoins</strong></div>
                         </div>
-                        <div class="pokecoin-carousel-item" data-link="DTuSev.html">
+                        <div class="pokecoin-carousel-item">
                             <img src="images/2700coins.png" alt="2,700 PokéCoins">
                             <p class="pokecoin-title">2,700 PokéCoins</p>
                             <p class="pokecoin-price">₱589.00</p>
                             <div class="pokecoin-bonus-info">2,500 + 200 Web Store Bonus = <br><strong>2,700 total PokéCoins</strong></div>
                         </div>
-                        <div class="pokecoin-carousel-item" data-link="DFiSx.html">
+                        <div class="pokecoin-carousel-item">
                             <img src="images/5600coins.png" alt="5,600 PokéCoins">
                             <p class="pokecoin-title">5,600 PokéCoins</p>
                             <p class="pokecoin-price">₱1,170.00</p>
                             <div class="pokecoin-bonus-info">5,200 + 400 Web Store Bonus = <br><strong>5,600 total PokéCoins</strong></div>
                         </div>
-                        <div class="pokecoin-carousel-item" data-link="DFifFive.html">
+                        <div class="pokecoin-carousel-item">
                             <img src="images/15500coins.png" alt="15,500 PokéCoins">
                             <p class="pokecoin-title">15,500 PokéCoins</p>
                             <p class="pokecoin-price">₱2,950.00</p>
                             <div class="pokecoin-bonus-info">14,500 + 1,000 Web Store Bonus = <br><strong>15,500 total PokéCoins</strong></div>
                         </div>
-                        <div class="pokecoin-carousel-item" data-link="DEitinEight.html">
-                            <img src="images/ExtraC.jpg" alt="18,800 PokéCoins">
+                        <div class="pokecoin-carousel-item">
+                            <img src="ExtraC.jpg" alt="18,800 PokéCoins">
                             <p class="pokecoin-title">18,800 PokéCoins</p>
                             <p class="pokecoin-price">₱3,270.00</p>
                             <div class="pokecoin-bonus-info">15,000 + 3,300 Web Store Bonus = <br><strong>18,800 total PokéCoins</strong></div>
                         </div>
-                        <div class="pokecoin-carousel-item" data-link="DTwentyK.html">
-                            <img src="images/CoinExtra1.png" alt="20,000 PokéCoins">
+                        <div class="pokecoin-carousel-item">
+                            <img src="CoinExtra1.png" alt="20,000 PokéCoins">
                             <p class="pokecoin-title">20,000 PokéCoins</p>
                             <p class="pokecoin-price">₱3,500.00</p>
                             <div class="pokecoin-bonus-info">16,000 + 4,000 Web Store Bonus = <br><strong>20,000 total PokéCoins</strong></div>
@@ -448,7 +450,41 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="home.js"></script>
 
-    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logos">
+                <a href="https://nianticlabs.com/" target="_blank">
+                    <img src="Logos/niantic-logo.png" alt="Niantic Logo" class="niantic-logo">
+                </a>
+                <a href="https://www.pokemon.com/" target="_blank">
+                    <img src="Logos/pokemoncompany.avif" alt="The Pokemon Company Logo" class="pokemon-logo">
+                </a>
+                <a href="home.html" target="_blank">
+                    <img src="Logos/group-logo.png" alt="Fourtnite Logo" class="group-logo">
+                </a>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.youtube.com/@pokemongo" target="_blank"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.facebook.com/PokemonGO/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/pokemongoapp/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.tiktok.com/@pokemongo" target="_blank"><i class="fab fa-tiktok"></i></a>
+            </div>
+            <div class="footer-links">
+                <a href="https://nianticlabs.com/terms" target="_blank">Terms of Service</a>
+                <a href="https://nianticlabs.com/privacy" target="_blank">Privacy Policy</a>
+                <a href="https://nianticlabs.com/copyright" target="_blank">Copyright Policy</a>
+                <a href="https://nianticlabs.com/guidelines" target="_blank">Player Guidelines</a>
+            </div>
+            <div class="footer-disclaimer">
+                <p>Disclaimer:</p>
+                <p>All images used on this website are the property of Niantic, Inc. This project is for educational purposes only, and no copyright infringement is intended.</p>
+            </div>
+            <div class="footer-copyright">
+                <p>©2023 Niantic, Inc. ©2023 Pokémon. ©1995-2023 Nintendo / Creatures Inc. / GAME FREAK Inc. Pokémon and Pokémon character names are trademarks of Nintendo. Apple and the Apple logo are trademarks of Apple Inc., registered in the U.S. and other countries. App Store is a service mark of Apple Inc. Android, Google Play and the Google Play logo are trademarks of Google LLC. During gameplay, please be aware of your surroundings and play safely.</p>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
