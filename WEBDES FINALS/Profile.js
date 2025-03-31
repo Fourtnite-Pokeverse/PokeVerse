@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (startProfileBtn) {
         startProfileBtn.addEventListener("click", function () {
             localStorage.setItem('username', 'Trainer 02');
-            window.location.href = 'profile.html';
+            window.location.href = 'Profile.html';
         });
     }
 });
