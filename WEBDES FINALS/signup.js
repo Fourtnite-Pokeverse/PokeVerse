@@ -32,3 +32,19 @@ sign_up_btn.addEventListener("click", () => {
 sign_in_btn.addEventListener("click", () => {
   container.classList.remove("sign-up-mode");
 });
+
+// Handle sign in form submission
+function handleSignIn(event) {
+    event.preventDefault();
+    alert('Successfully logged in!');
+    window.location.href = 'home.html';
+    return false;
+}
+
+// Handle sign up form submission
+function handleSignUp(event) {
+    event.preventDefault();
+    alert('Successfully logged in!');
+    window.location.href = 'home.html';
+    return false;
+}
