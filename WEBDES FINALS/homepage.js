@@ -462,6 +462,7 @@ function scrollPokecoinCarousel(direction) {
     carousel.style.transition = 'transform 0.4s ease-in-out';
     carousel.style.transform = `translateX(-${currentPosition}px)`;
 }
+
 // popular Item
 function openbunModal(modalId) {
     const modal = document.getElementById(modalId);
