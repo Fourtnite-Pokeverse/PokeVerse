@@ -479,7 +479,8 @@ function openbunModal(modalId) {
         modal.style.display = "block";
         document.body.style.overflow = "hidden";
 
-        document.querySelectorAll(".bun-card-banner").forEach(el => {
+        // Hide banners & timers
+        document.querySelectorAll(".bun-card-banner, .timer, .card-banner").forEach(el => {
             el.style.display = "none";
         });
     }
@@ -499,9 +500,16 @@ function closeAllModals() {
 function closebunModal(modalId) {
     const modal = document.getElementById(modalId);
     if (modal) {
-        closeAllModals();
+        modal.style.display = "none";
+        document.body.style.overflow = "auto";
+
+        // Restore banners & timers
+        document.querySelectorAll(".bun-card-banner, .timer, .card-banner").forEach(el => {
+            el.style.display = "block";
+        });
     }
 }
+
 
 window.onclick = function (event) {
     document.querySelectorAll(".bun-modal").forEach(modal => {
@@ -510,6 +518,7 @@ window.onclick = function (event) {
         }
     });
 };
+
 document.addEventListener("DOMContentLoaded", function () {
     var modal1 = document.getElementById("Promodal1");
     var btn1 = document.getElementById("PopenModal1");
