@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Ticketing</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="homepagestyle.css" rel="stylesheet">
+    <link rel="icon" href="Logos/Gaming.png">
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: url('https://static.vecteezy.com/system/resources/previews/030/657/873/non_2x/create-a-simple-slightly-cartoonish-background-free-photo.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .event-container {
+            background: rgba(52, 152, 219, 0.9);
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            border-radius: 15px;
+            box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .event-card {
+            background: rgba(52, 152, 219, 0.9);
+            padding: 20px;
+            border-radius: 15px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .event-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .event-image img {
+            width: 100%;
+            border-radius: 15px;
+        }
+
+        .ticket-btn {
+            display: inline-block;
+            background: #f39c12;
+            color: white;
+            padding: 12px 20px;
+            margin-top: 38px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s, transform 0.2s;
+            justify-self: bottom;
+            text-decoration: none;
+        }
+
+        .ticket-btn:hover {
+            background: #e67e22;
+            transform: scale(1.1);
+            text-decoration: none;
+        }
+
+        .tickets-button:hover {
+            background-color: #d0d022;
+        }
+
+        .cardinfo {
+            display: flex;
+        }
+
+        .date {
+            background-color: #E74F4C;
+            justify-items: center;
+            align-content: center;
+            background-color: lightre;
+            height: 200px;
+            width: 200px;
+            color: white;
+        }
+
+        .lowerpart {
+            display: flex;
+        }
+
+        .eventInfo {
+            justify-items: start;
+            padding: 20px
+        }
+
+        .eventInfo p {
+            color: white;
+            font-size: 25px;
+            margin-bottom: 0;
+        }
+
+        .cak-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #f39c12;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: bold;
+            text-decoration: none;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .back-button {
+            position: absolute;
+            top: 80px;
+            /* Below the navbar */
+            left: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        .back-button i {
+            margin-right: 8px;
+        }
+
+        .back-button:hover {
+            background: rgba(52, 152, 219, 0.9);
+            transform: scale(1.1);
+            box-shadow: 0 0 10px rgba(52, 152, 219, 0.9);
+            color: white;
+            text-decoration: none;
+        }
+
+        h1 {
+            font-family: 'Pixelify Sans', sans-serif;
+            font-size: 80px;
+                color: linear-gradient(90deg, #ff66c4, #ffde59);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header d-flex justify-content-between align-items-center">
+        <div class="d-flex align-items-center">
+            <a href="home.html" class="d-flex align-items-center text-decoration-none">
+                <img src="Logos/Gaming.png" alt="Logo" class="img-fluid" style="height: 70px; width: 70px;">
+                <span class="text-white h3 ml-2">Web Store</span>
+            </a>
+        </div>
+        <nav class="nav">
+            <a class="nav-link" href="codeRedemption.html">Code Redemption</a>
+            <a class="nav-link" href="#">Event Ticketing</a>
+            <div class="profile-dropdown">
+                <button class="profile-btn" onclick="toggleProfileMenu()">
+                    <img src="Icons/pikachuprofile.jpg" alt="Profile" style="width: 40px; height: 40px; border-radius: 50%; object-fit: cover;">
+                </button>
+                <div class="profile-menu" id="profileMenu">
+                    <div class="profile-header">
+                        <div class="profile-info">
+                            <span class="username">Username</span>
+                            <span class="player-id">Player ID: <span id="displayPlayerId"></span></span>
+                        </div>
+                    </div>
+                    <div class="profile-links">
+                        <a href="Profile.html" class="profile-link"><i class="fas fa-user"></i> Profile</a>
+                        <a href="UserCart.html" class="profile-link"><i class="fas fa-shopping-cart"></i> Cart</a>
+                        <a href="codeRedemption.html" class="profile-link"><i class="fas fa-ticket-alt"></i> Code Redemption</a>
+                        <a href="#" class="profile-link"><i class="fas fa-calendar-alt"></i> Event Ticketing</a>
+                        <a href="homepage.html" class="profile-link"><i class="fas fa-sign-out-alt"></i> Sign Out</a>
+
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <a href="https://fourtnite-pokeverse.github.io/PokeVerse/WEBDES%20FINALS/homepage.html" class="back-button">
+        <i class="fas fa-arrow-left"></i> Back
+    </a>
+
+    <h1 class="text-center mt-4">EVENT TICKETING</h1>
+
+    <div class="event-container">
+        <div class="event-card">
+            <div class="event-image">
+                <img src="https://storage.googleapis.com/events-server-release-user-assets/PGORELEASE-b7331d165b48ce83.png"
+                    alt="Pokémon GO City Safari">
+            </div>
+            <div class="lowerpart">
+                <div class="date">
+                    <div class="cardinfo">
+                        <h2>MAY 29th-</h2>
+                    </div>
+                    <div class="cardinfo">
+                        <h2>JUN 1s</h2>
+                    </div>
+                </div>
+                <div class="eventInfo">
+                    <p><strong>Pokémon GO Fest 2025: Osaka</strong></p>
+                    <p>Osaka, Japan</p>
+                    <a href="#" class="ticket-btn">Sold Out</a>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+     <!-- Footer -->
+     <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logos">
+                <a href="https://nianticlabs.com/" target="_blank">
+                    <img src="Logos/niantic-logo.png" alt="Niantic Logo" class="niantic-logo">
+                </a>
+                <a href="https://www.pokemon.com/" target="_blank">
+                    <img src="Logos/pokemoncompany.avif" alt="The Pokemon Company Logo" class="pokemon-logo">
+                </a>
+                <a href="home.html" target="_blank">
+                    <img src="Logos/group-logo.png" alt="Fourtnite Logo" class="group-logo">
+                </a>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.youtube.com/@pokemongo" target="_blank"><i class='bx bxl-youtube'></i></a>
+                <a href="https://www.facebook.com/PokemonGO/" target="_blank"><i class='bx bxl-facebook'></i></a>
+                <a href="https://www.instagram.com/pokemongoapp/" target="_blank"><i class='bx bxl-instagram'></i></a>
+                <a href="https://www.tiktok.com/@pokemongo" target="_blank"><i class='bx bxl-tiktok'></i></a>
+            </div>
+            <div class="footer-links">
+                <a href="https://nianticlabs.com/terms" target="_blank">Terms of Service</a>
+                <a href="https://nianticlabs.com/privacy" target="_blank">Privacy Policy</a>
+                <a href="https://nianticlabs.com/copyright" target="_blank">Copyright Policy</a>
+                <a href="https://nianticlabs.com/guidelines" target="_blank">Player Guidelines</a>
+            </div>
+            <div class="footer-disclaimer">
+                <p>Disclaimer:</p>
+                <p>All images used on this website are the property of Niantic, Inc. This project is for educational purposes only, and no copyright infringement is intended.</p>
+            </div>
+            <div class="footer-copyright">
+                <p>©2023 Niantic, Inc. ©2023 Pokémon. ©1995-2023 Nintendo / Creatures Inc. / GAME FREAK Inc. Pokémon and Pokémon character names are trademarks of Nintendo. Apple and the Apple logo are trademarks of Apple Inc., registered in the U.S. and other countries. App Store is a service mark of Apple Inc. Android, Google Play and the Google Play logo are trademarks of Google LLC. During gameplay, please be aware of your surroundings and play safely.</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="home.js"></script>
+    <script>
+        document.querySelector('.apply-button').addEventListener('click', function() {
+            alert('Code Redeemed successfully!');
+        });
+    </script>
+</body>
+
+
+</html>
