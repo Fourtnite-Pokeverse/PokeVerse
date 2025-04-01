@@ -1,35 +1,50 @@
 // Function to open modal 
 function openPopModal(modalId) {
+    document.querySelectorAll(".pop-modal").forEach(modal => {
+        modal.style.display = "none"; 
+    });
+
     const modal = document.getElementById(modalId);
     if (modal) {
         modal.style.display = "block";
+        modal.style.opacity = "1";
         document.body.style.overflow = "hidden";
 
-        document.querySelectorAll(".card-banner, .timer1").forEach(el => {
-            el.style.display = "none";
+        // Hide banners & timers
+        document.querySelectorAll(".bun-card-banner, .timer, .card-banner").forEach(el => {
+            el.style.visibility = "hidden"; 
+            el.style.opacity = "0";
         });
     }
 }
 
-function closeAllModals() {
-    document.querySelectorAll(".pop-modal").forEach(modal => {
-        modal.style.display = "none";
-    });
-    document.body.style.overflow = "auto";
-
-
-    document.querySelectorAll(".card-banner, .timer1").forEach(el => {
-        el.style.display = "block";
-    });
-}
-
-
 function closePopModal(modalId) {
     const modal = document.getElementById(modalId);
     if (modal) {
-        closeAllModals();
+        modal.style.opacity = "0"; 
+        modal.style.transition = "opacity 0.3s"; 
+
+        setTimeout(() => {
+            modal.style.display = "none"; 
+            document.body.style.overflow = "auto";
+
+            // Restore banners & timers
+            document.querySelectorAll(".bun-card-banner, .timer, .card-banner").forEach(el => {
+                el.style.visibility = "visible"; 
+                el.style.opacity = "1"; 
+            });
+        }, 300);
     }
 }
+
+window.onclick = function (event) {
+    document.querySelectorAll(".pop-modal").forEach(modal => {
+        if (event.target === modal) {
+            closePopModal(modal.id); 
+        }
+    });
+};
+
 
 window.onclick = function (event) {
     document.querySelectorAll(".pop-modal").forEach(modal => {
