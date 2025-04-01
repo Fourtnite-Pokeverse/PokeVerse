@@ -1801,11 +1801,6 @@ body {
     gap: 5px;
 }
 
-h2, h3 {
-    color: #f57a37;
-    font-size: 24px;
-}
-
 .promo-limited-time {
     color: white;
     font-size: 1.2rem;
