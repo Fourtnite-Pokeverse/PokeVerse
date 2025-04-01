@@ -1496,3 +1496,458 @@ body {
         text-align: center;
     }
 }
+.bun-cards-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px;
+}
+
+.bun-card-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bun-card-banner {
+    font-family: "Pixelify Sans", sans-serif;
+    font-weight: 700;
+    background: linear-gradient(to right, #00AEEF, #ec5dec);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    position: absolute;
+    top: -20px;
+    z-index: 2;
+}
+
+.bun-card {
+    width: 250px;
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border: 3px solid #000000;
+    position: relative;
+}
+
+.bun-image-section {
+    position: relative;
+    background: url('https://img.freepik.com/free-vector/flat-comic-style-background-copy-space_52683-54924.jpg?t=st=1743476895~exp=1743480495~hmac=c14dc5c3af5b1c1a8eed3df8c16155cdb579ab8d56e16f705bf36b0f33656fa9&w=1380') center/cover;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.bun-main-image {
+    width: 120px;
+    height: 120px; 
+    object-fit: contain; 
+}
+
+.bun-small-items .item img {
+    width: 50px;
+    height: 50px; 
+    object-fit: contain; 
+}
+
+.bun-small-items {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 5px;
+}
+
+.bun-item {
+    width: 50px; 
+    height: 50px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.bun-item img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: contain; 
+}
+
+
+.bun-item-count {
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+    background: linear-gradient(to right, pink, blue);
+    color: white;
+    padding: 3px 7px;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.bun-card-title {
+    color: #00AEEF;
+    margin: 10px 0 5px;
+    font-size: 18px;
+}
+
+.bun-card-subtitle {
+    font-family: "Pixelify Sans", sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    color: rgba(122, 120, 120, 0.459);
+}
+
+.bun-price-btn {
+    background: linear-gradient(to right, #00AEEF, #ec5dec);
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.bun-modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.bun-modal-content {
+    background-color: white;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 320px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.bun-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+    background: linear-gradient(to right, #00AEEF, #ec5dec);
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.bun-close:hover {
+    background: linear-gradient(to right, #008dcf, #c13eb9);
+}
+
+.bun-image-banner {
+    position: relative;
+    background: url("https://img.freepik.com/free-vector/flat-comic-style-background-copy-space_52683-54924.jpg?t=st=1743476895~exp=1743480495~hmac=c14dc5c3af5b1c1a8eed3df8c16155cdb579ab8d56e16f705bf36b0f33656fa9&w=1380") center/cover;
+    background-size: contain; 
+    background-repeat: no-repeat; 
+    background-position: center;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.bun-banner-text {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: linear-gradient(to right, #00AEEF, #FF69B4);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 12px;
+    font-family: "Pixelify Sans", sans-serif;
+}
+
+.bun-box1img {
+    width: 120px; 
+    height: 120px; 
+    object-fit: contain; 
+}
+
+.bun-modal-title {
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #00AEEF;
+    margin-top: 10px;
+}
+
+.bun-item-list {
+    margin: 10px 0;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.bun-items {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.bun-iconimg {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin-right: 15px; 
+}
+
+.bun-item-details {
+    font-family: "Pixelify Sans", sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 5px; 
+    flex-grow: 1;
+}
+
+.bun-item-counts {
+    background: linear-gradient(to right, #00AEEF, #ec5dec);
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 3px 7px;
+    border-radius: 50%;
+}
+
+.bun-bottom-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.bun-price-container {
+    display: flex;
+    align-items: center;
+    gap: 20px; 
+}
+
+.bun-price-btn {
+    background: linear-gradient(to right, #00AEEF, #ec5dec);
+    color: white;
+    border: none;
+    padding: 12px;
+    width: auto;
+    min-width: 100px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+}
+
+.bun-price-btn:hover {
+    background: linear-gradient(to right, #008dcf, #c13eb9);
+}
+
+.popularItem {
+    margin-top: 40px;
+}
+
+.bun-card-wrapper {
+    margin-top: 10px; 
+}
+.promo-container {
+    width: 70vw;
+    max-width: 800px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.promo-bundle {
+    background-image: url("https://static.vecteezy.com/system/resources/thumbnails/046/362/919/small/blank-yellow-modern-comic-page-frame-background-design-template-vector.jpg");
+    height: 40vh;
+    width: 30vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    gap: 5px;
+}
+
+h2, h3 {
+    color: #f57a37;
+    font-size: 24px;
+}
+
+.promo-limited-time {
+    color: white;
+    font-size: 1.2rem;
+    padding: 5px;
+    background: linear-gradient(90deg, #ff66c4, #ffde59);
+    font-family: 'Pixelify Sans', sans-serif;
+}
+
+.promo-price {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 6px;
+    border-radius: 20px;
+    background: linear-gradient(90deg, #ff66c4, #ffde59);
+}
+
+.promo-price span {
+    text-decoration: line-through;
+    color: rgba(88, 85, 85, 0.307);
+    margin-left: 10px;
+}
+
+.promo-items {
+    background-image: url("https://img.freepik.com/free-vector/announcement-background-design_23-2151179926.jpg?t=st=1743426500~exp=1743430100~hmac=76d25e092faa3ec37ac1b16d10496be086052a8d3ca71a52fddbeeb4be4e14b4&w=1380");
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat; 
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: solid black 2px;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.promo-mini-items {
+    display: flex;
+    gap: 10px;
+}
+
+.promo-mini-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.promo-main-item img {
+    width: 120px;
+    height: 120px;
+    position: relative;
+    left: 15px; 
+    top: -10px; 
+}
+
+.promo-quantity {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(90deg, #ff66c4, #ffde59);
+    color: black;
+    padding: 5px 10px;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+.promo-mini-item img {
+    width: 70px;
+    height: 70px ;
+    object-fit: contain; 
+}
+.promo-imgbox {
+    flex-direction: row;
+}
+
+/*modals*/
+.pmodal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.pmodal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+    display: flex;
+}
+
+.pclose {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+   
+}
+
+.pclose:hover,
+.pclose:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.item-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.promo-item {
+    text-align: center;
+    height: 100px;
+    width: 100px;
+}
+
+.promo-price {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.promo_mobox img {
+    
+        width: 250px;
+        height: 250px;
+        object-fit: contain; 
+}
+.promo_moLabel {
+    font-size: 30px;
+    color: white;
+  
+}
