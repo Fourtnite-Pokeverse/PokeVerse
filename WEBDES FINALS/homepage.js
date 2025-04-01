@@ -559,3 +559,5 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 });
+document.getElementById("promoButton").addEventListener("click", function() {
+});
