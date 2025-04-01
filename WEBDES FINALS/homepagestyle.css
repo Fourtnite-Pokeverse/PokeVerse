@@ -1813,11 +1813,17 @@ body {
     color: white;
     font-size: 24px;
     font-weight: bold;
-    padding: 6px;
+    padding: 10px 20px;
     border-radius: 20px;
     background: linear-gradient(90deg, #ff66c4, #ffde59);
+    border: none;
+    cursor: pointer; 
+    transition: 0.3s ease-in-out;
 }
 
+.promo-price:hover {
+    opacity: 0.8; 
+}
 .promo-price span {
     text-decoration: line-through;
     color: rgba(88, 85, 85, 0.307);
